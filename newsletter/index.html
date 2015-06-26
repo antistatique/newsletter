@@ -15,8 +15,8 @@
   <style type="text/css">
 
     /* Resets: see reset.css for details */
-    .ReadMsgBody { width: 100%; background-color: #EAEBEB;}
-    .ExternalClass {width: 100%; background-color: #EAEBEB;}
+    .ReadMsgBody { width: 100%; background-color: #eaf0f0;}
+    .ExternalClass {width: 100%; background-color: #eaf0f0;}
     .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
     body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
     body {margin:0; padding:0;}
@@ -37,34 +37,432 @@
     li{
       margin: 0;
       padding: 0;
+      font-family: helvetica, arial, Sans-serif;
+    }
+    .table_of_content li{
+      list-style: none;
+    }
+    .table_of_content a{
+      color:#ffffff;
+      font-family: helvetica, arial, Sans-serif;
+    }
+    .container_img{
+      padding: 10px 0;
+    }
+    .bloc_title{
+      color: #000032;
+      font-family: helvetica, arial, Sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .bloc_text{
+      color: #474963;
+      font-family: helvetica, arial, Sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .bloc_footer{
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .newsletter_intro{
+      color: #000032;
+      font-family: helvetica, arial, Sans-serif;
+      font-size: 12px;
     }
 
     /* Constrain email width for small screens */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 760px) {
       table[class="container"] {
-        width:100% !important;
+        width:96% !important;
+        margin-left: 2%!important;
+        margin-right: 2%!important;
       }
-      table[class="cells"] {
-        margin-top:10px!important;
+      img[class="item_img"]{
         width: 100%!important;
-        margin-left:0!important;
+        height: auto!important;
       }
     }
 
     /*
     Corporate
-
+    // Colors
+    $pinkstatik:                   #ef2678; // our branded pink
+    $pinkstatik-dark:              #be236e;
+    $midnight-blue:                #000032;
+    $midnight-blue-light:          #808098;
+    $midnight-blue-lighter:        #bfbfcb;
+    $midnight-blue-variant:        #4c4c6f;
+    $dust:                         #eaf0f0;
+    $white:                        #fff;
     */
 
 
   </style>
 
 </head>
-<body style="margin:0px; padding:0px;" color="#222222" bgcolor="#EAEBEB" link="#5A97BD" vlink="#7BC9DD" style="-webkit-text-size-adjust: none;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<body style="margin:0px; padding:0px;" color="#000032" bgcolor="#eaf0f0" link="#ef2678" vlink="#be236e" style="-webkit-text-size-adjust: none;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
   <!-- 100% wrapper (grey background) -->
-  <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#EAEBEB">
+  <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0">
+    <tr>
+      <td align="center">
+        <table class="container" border="0" width="640" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0" align="center">
+          <tr>
+            <td align="left">
+              <!-- logo -->
+              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0" align="center">
+                <tr>
+                  <td width="40%">
+                    <a href="http://antistatique.net" target="_blank"><img src="logo.png" alt="Antistatique" border="0" width="60%"></a>
+                  </td>
+                  <td align="right" valign="middle">
+                    <div class="newsletter_intro"><singleline label="newsletter_title">Notre newslettre tout juste sorti du grill</singleline></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" height="2">
+                    <img src="px.gif" border="0" alt="" height="2" width="2">
+                  </td>
+                </tr>
+              </table>
 
-  </table>
+              <!-- Cover photo -->
+              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#4c4c6f" align="center">
+                <tr>
+                  <td>
+                    <img src="mai2015.png" alt="" width="640" editable="true" class="item_img">
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Intro -->
+             <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                  <tr>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                    <td>
+                      <p class="bloc_title">
+                        <singleline label="bloc_title">
+                          Summer is coming!
+                        </singleline>
+                      </p>
+                      <div class="bloc_text">
+                        <multiline label="bloc_content">
+                          <p>
+                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
+                          </p>
+                          <p>
+                            Bonne lecture,
+                          </p>
+                          <p>
+                            — l’équipe Antistatique
+                          </p>
+                        </multiline>
+                      </div>
+                    </td>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                </table>
+
+              <!-- TOC -->
+              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ef2678">
+                <tr>
+                  <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                </tr>
+                <tr>
+                  <td width="20">
+                    <img src="px.gif" border="0" alt="" height="20" width="20">
+                  </td>
+                  <td>
+
+                    <ul class="table_of_content" style="color:#ffffff">
+                      <tableofcontents>
+                        <li style="margin-bottom:4px;">
+                          <repeatertitle />
+                        </li>
+                      </tableofcontents>
+                    </ul>
+                  </td>
+                  <td width="20">
+                    <img src="px.gif" border="0" alt="" height="20" width="20">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                </tr>
+              </table>
+
+
+              <repeater>
+
+                <!-- Titre, texte -->
+                <layout label='Titre, texte'>
+                 <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                  <tr>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                    <td>
+                      <p class="bloc_title">
+                        <singleline label="bloc_title">
+                          Summer is coming!
+                        </singleline>
+                      </p>
+                      <div class="bloc_text">
+                        <multiline label="bloc_content">
+                          <p>
+                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
+                          </p>
+                          <p>
+                            Bonne lecture,
+                          </p>
+                          <p>
+                            — l’équipe Antistatique
+                          </p>
+                        </multiline>
+                      </div>
+                    </td>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                  <tr bgcolor="#4c4c6f">
+                    <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
+                  </tr>
+                </table>
+              </layout>
+
+              <!-- Titre, image et texte -->
+              <layout label='Titre, image et texte'>
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                  <tr>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                    <td>
+                      <p class="bloc_title">
+                        <singleline label="bloc_title">
+                          Summer is coming!
+                        </singleline>
+                      </p>
+                      <div class="container_img"><img src="image_temp.png" alt="" editable="true" class="item_img" width="600"></div>
+                      <div class="bloc_text">
+                        <multiline label="bloc_content">
+                          <p>
+                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
+                          </p>
+                          <p>
+                            Bonne lecture,
+                          </p>
+                          <p>
+                            — l’équipe Antistatique
+                          </p>
+                        </multiline>
+                      </div>
+                    </td>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                  <tr bgcolor="#4c4c6f">
+                    <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
+                  </tr>
+                </table>
+              </layout>
+
+              <!-- Titre, image texte, image et texte -->
+              <layout label='Titre, image texte, image et texte'>
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                  <tr>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                    <td>
+                      <p class="bloc_title">
+                        <singleline label="bloc_title">
+                          Summer is coming!
+                        </singleline>
+                      </p>
+                      <div class="container_img"><img src="image_temp.png" alt="" editable="true" class="item_img" width="600"></div>
+                      <div class="bloc_text">
+                        <multiline label="bloc_content">
+                          <p>
+                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
+                          </p>
+                        </multiline>
+                      </div>
+                      <div class="container_img"><img src="image_temp.png" alt="" editable="true" class="item_img" width="600"></div>
+                      <div class="bloc_text">
+                        <multiline label="bloc_content">
+                          <p>
+                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
+                          </p>
+                        </multiline>
+                      </div>
+                    </td>
+                    <td width="20">
+                      <img src="px.gif" border="0" alt="" height="20" width="20">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+                  </tr>
+                  <tr bgcolor="#4c4c6f">
+                    <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
+                  </tr>
+                </table>
+              </layout>
+
+            </repeater>
+
+            <!-- Contact et RS -->
+            <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+              <tr>
+                <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+              </tr>
+              <tr>
+                <td width="20">
+                  <img src="px.gif" border="0" alt="" height="20" width="20">
+                </td>
+                <td>
+                  <p class="bloc_title">
+                    <singleline label="contact_title">
+                      Prendre contact avec nous
+                    </singleline>
+                  </p>
+                  <div class="bloc_text">
+                    <multiline label="contact_content">
+                      <p>
+                        +41 21 623 63 03 ou
+                        <a href="mailto:hello@antistatique.net">
+                        hello@antistatique.net
+                        </a>
+                        <br>
+                        <strong>Lausanne</strong> › Rue de Sébeillon 9b <br>
+                        <strong>Genève</strong> › Impact Hub Geneva, Rue Fendt 1
+                      </p>
+                    </multiline>
+                  </div>
+                </td>
+                <td width="20">
+                  <img src="px.gif" border="0" alt="" height="20" width="20">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+              </tr>
+              <tr>
+                <td width="20">
+                  <img src="px.gif" border="0" alt="" height="20" width="20">
+                </td>
+                <td>
+                  <div class="bloc_text">
+                  <p>
+                    <singleline label="contact_rs_title">
+                      et sur les réseaux sociaux
+                    </singleline>
+                  </p>
+                  </div>
+                  <table border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="46">
+                          <a href="http://github.com/antistatique" target="_blank">
+                            <img src="github.png" alt="github" width="46" height="46" border="0">
+                          </a>
+                        </td>
+                        <td width="46">
+                          <a href="http://facebook.com/Antistatique" target="_blank">
+                            <img src="facebook.png" alt="facebook" width="46" height="46" border="0">
+                          </a>
+                        </td>
+                        <td width="46">
+                          <a href="http://instagram.com/antistatique" target="_blank">
+                            <img src="instagram.png" alt="instagram" width="46" height="46" border="0">
+                          </a>
+                        </td>
+                        <td width="46">
+                          <a href="http://www.linkedin.com/company/antistatique.net" target="_blank">
+                            <img src="linkedin.png" alt="linkedin" width="46" height="46" border="0">
+                          </a>
+                        </td>
+                        <td width="46">
+                          <a href="http://twitter.com/antistatique" target="_blank">
+                            <img src="twitter.png" alt="twitter" width="46" height="46" border="0">
+                          </a>
+                        </td>
+                  </tr>
+                  </table>
+                </td>
+                <td width="20">
+                  <img src="px.gif" border="0" alt="" height="20" width="20">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+              </tr>
+              <tr bgcolor="#4c4c6f">
+                <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
+              </tr>
+            </table>
+
+            <!-- Pref et unsubscribe -->
+              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0" align="center">
+                <tr>
+                  <td colspan="2" height="40">
+                    <img src="px.gif" border="0" alt="" height="40" width="1">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                  <div class="bloc_text bloc_footer">
+                  <multiline label="unsubscribe_pref_message">
+Editez vos <preferences style="color:#ef2678;text-decoration:underline;">pr&eacute;f&eacute;rences</preferences> ou <unsubscribe style="color:#ef2678;text-decoration:underline;">d&eacute;sinscrivez-vous</unsubscribe> de notre newsletter.<br />
+            <br />
+            Vous recevez cet email, car rappelez-vous, vous &ecirc;tes un client chanceux d'Antistatique
+            ou inscrit via notre site.<br />
+            Si vous ne voyez pas correctement cet e-mail <webversion style="color:#ef2678;text-decoration:underline;">consultez la version web</webversion> 
+                  </multiline>
+                  </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" height="40">
+                    <img src="px.gif" border="0" alt="" height="40" width="1">
+                  </td>
+                </tr>
+              </table>
+
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 </body>
 </html>
