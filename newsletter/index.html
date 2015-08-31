@@ -1,472 +1,902 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-  "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="initial-scale=1.0">    <!-- So that mobile webkit will display zoomed in -->
-  <meta name="format-detection" content="telephone=no"> <!-- disable auto telephone linking in iOS -->
-
-  <meta property="og:title" content="Antistatique">
-  <meta property="og:description" content="Antistatique">
-  <meta property="og:site_name" content="Antistatique">
-
-  <title>Antistatique</title>
-
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <style type="text/css">
-
-    /* Resets: see reset.css for details */
-    .ReadMsgBody { width: 100%; background-color: #eaf0f0;}
-    .ExternalClass {width: 100%; background-color: #eaf0f0;}
-    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}
-    body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;}
-    body {margin:0; padding:0;}
-/*    table {border-spacing:0;}
-    table td {border-collapse:collapse;}*/
-    .yshortcuts a {border-bottom: none !important;}
-    img{
-      display: block;
-    }
-    p{
-      margin: 10px 0;
-      padding: 0;
-    }
-    ul{
-      margin: 5px 0;
-      padding: 5px 15px;
-    }
-    li{
-      margin: 0;
-      padding: 0;
-      font-family: helvetica, arial, Sans-serif;
-    }
-    .table_of_content li{
-      list-style: none;
-    }
-    .table_of_content a{
-      color:#ffffff;
-      font-family: helvetica, arial, Sans-serif;
-    }
-    .container_img{
-      padding: 10px 0;
-    }
-    .bloc_title{
-      color: #000032;
-      font-family: helvetica, arial, Sans-serif;
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .bloc_text{
-      color: #474963;
-      font-family: helvetica, arial, Sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-    }
-    .bloc_footer{
-      font-size: 12px;
-      line-height: 16px;
-    }
-    .newsletter_intro{
-      color: #000032;
-      font-family: helvetica, arial, Sans-serif;
-      font-size: 12px;
-    }
-
-    /* Constrain email width for small screens */
-    @media screen and (max-width: 760px) {
-      table[class="container"] {
-        width:96% !important;
-        max-width: 96% !important;
-        margin-left: 2%!important;
-        margin-right: 2%!important;
-      }
-      img[class="item_img"]{
-        width: 100%!important;
-        height: auto!important;
-      }
-    }
-
-    /*
-    Corporate
-    // Colors
-    $pinkstatik:                   #ef2678; // our branded pink
-    $pinkstatik-dark:              #be236e;
-    $midnight-blue:                #000032;
-    $midnight-blue-light:          #808098;
-    $midnight-blue-lighter:        #bfbfcb;
-    $midnight-blue-variant:        #4c4c6f;
-    $dust:                         #eaf0f0;
-    $white:                        #fff;
-    */
-
-
-  </style>
-
+body {margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%;}
+table {border-collapse: collapse;border-spacing: 0;}
+td {padding: 0;vertical-align: top;}
+.spacer,.border {font-size: 1px;line-height: 1px;}
+.spacer {width: 100%;}
+img {border: 0;-ms-interpolation-mode: bicubic;}
+.image {font-size: 12px;Margin-bottom: 25px;mso-line-height-rule: at-least;}
+.image img {display: block;}
+.logo {mso-line-height-rule: at-least;}
+.logo img {display: block;}
+strong {font-weight: bold;}
+h1,h2,h3,p,ol,ul,li {Margin-top: 0;}
+ol,ul,li {padding-left: 0;}
+blockquote {Margin-top: 0;Margin-right: 0;Margin-bottom: 0;padding-right: 0;}
+.column-top {font-size: 34px;line-height: 34px;}
+.column-bottom {font-size: 17px;line-height: 17px;}
+.column {text-align: left;}
+.contents {table-layout: fixed;width: 100%;}
+.padded {padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word;}
+.wrapper {display: table;table-layout: fixed;width: 100%;min-width: 620px;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
+.wrapper a {transition: opacity 0.2s ease-in;}
+table.wrapper {table-layout: fixed;}
+.one-col,.two-col,.three-col {Margin-left: auto;Margin-right: auto;width: 600px;}
+.centered {Margin-left: auto;Margin-right: auto;}
+.btn {Margin-bottom: 25px;}
+.btn a {border-radius: 3px;
+  display: inline-block;font-size: 14px;font-weight: 700;line-height: 24px;padding: 13px 35px 12px 35px;text-align: center;text-decoration: none !important;}
+.btn a:hover {opacity: 0.8;}
+.two-col .btn {Margin-bottom: 28px;}
+.two-col .btn a {font-size: 12px;line-height: 22px;padding: 10px 28px;}
+.three-col .btn {Margin-bottom: 18px;}
+.three-col .btn a {font-size: 11px;line-height: 19px;padding: 6px 18px 5px 18px;}
+@media only screen and (max-width: 620px) {.btn {margin-bottom: 25px !important;}
+  .btn a {display: block !important;font-size: 14px !important;line-height: 24px !important;padding: 13px 10px 12px 10px !important;}}
+.two-col .image {Margin-bottom: 28px;}
+.two-col .column-bottom {font-size: 6px;
+  line-height: 6px;}
+.two-col .column {width: 300px;}
+.two-col .first .padded {padding-left: 32px;
+  padding-right: 32px;}
+.two-col .second .padded {padding-left: 32px;
+  padding-right: 32px;}
+.three-col .image {Margin-bottom: 18px;}
+.three-col .column-bottom {font-size: 16px;
+  line-height: 16px;}
+.three-col .column {width: 200px;}
+.three-col .first .padded {padding-left: 32px;
+  padding-right: 12px;}
+.three-col .second .padded {padding-left: 22px;
+  padding-right: 22px;}
+.three-col .third .padded {padding-left: 12px;
+  padding-right: 32px;}
+@media only screen and (min-width: 0) {
+  .wrapper {text-rendering: optimizeLegibility;}
+}
+@media only screen and (max-width: 620px) {
+  [class=wrapper] {min-width: 320px !important;width: 100% !important;}
+  [class=wrapper] .one-col,[class=wrapper] .two-col,[class=wrapper] .three-col {width: 320px !important;}
+  [class=wrapper] .column,[class=wrapper] .gutter {display: block;float: left;width: 320px !important;}
+  [class=wrapper] .padded {padding-left: 20px !important;padding-right: 20px !important;}
+  [class=wrapper] .block {display: block !important;}
+  [class=wrapper] .hide {display: none !important;}
+  [class=wrapper] .image {margin-bottom: 25px !important;}
+  [class=wrapper] .image img {height: auto !important;width: 100% !important;}
+}
+.wrapper h1 {font-weight: 500;}
+.wrapper h2 {font-weight: 500;}
+.wrapper h3 {font-weight: 700;}
+.wrapper p,.wrapper ol,.wrapper ul {font-weight: 400;}
+.wrapper blockquote {font-style: italic;}
+.preheader {font-size: 11px;line-height: 17px;}
+.preheader .title {padding: 9px;text-align: left;width: 50%;}
+.preheader .webversion {padding: 9px;text-align: right;width: 50%;}
+.preheader a,.footer a {border: none !important;font-weight: 700;letter-spacing: 0.01em;}
+.separator {font-size: 34px;line-height: 34px;}
+.divider {width: 100%;}
+.hr {font-size: 3px;line-height: 3px;}
+.one-col .hr {Margin-left: 238px;Margin-right: 238px;Margin-bottom: 25px;}
+.two-col .hr {Margin-left: 96px;Margin-right: 96px;Margin-bottom: 28px;}
+.three-col .hr {Margin-left: 48px;Margin-right: 48px;Margin-bottom: 18px;}
+.one-col-feature .hr {Margin: 0 230px 28px 230px;}
+.wrapper a {text-decoration: none;}
+.wrapper a:hover {border-bottom-color: transparent !important;}
+.wrapper h1 a,.wrapper h2 a,.wrapper h3 a {border: none;text-decoration: none;}
+.wrapper h1 a:hover,.wrapper h2 a:hover,.wrapper h3 a:hover {border: none !important;}
+.wrapper blockquote {Margin: 0;padding-right: 0;}
+.one-col-bg,.two-col-bg,.three-col-bg,.one-col-feature-bg {width: 100%;}
+.centered {background-color: #ffffff;}
+.one-col .column table:nth-last-child(2) td h1:last-child,.one-col .column table:nth-last-child(2) td h2:last-child,.one-col .column table:nth-last-child(2) td h3:last-child,.one-col .column table:nth-last-child(2) td p:last-child,.one-col .column table:nth-last-child(2) td ol:last-child,.one-col .column table:nth-last-child(2) td ul:last-child {Margin-bottom: 25px;}
+.one-col h1 {font-size: 36px;Margin-bottom: 18px;}
+.one-col h2 {font-size: 24px;Margin-bottom: 12px;}
+.one-col h3 {font-size: 14px;Margin-bottom: 10px;}
+.one-col p,.one-col ol,.one-col ul {font-size: 16px;}
+.one-col ol,.one-col ul {Margin-left: 17px;}
+.one-col li {padding-left: 4px;}
+.wrapper .one-col blockquote {padding-left: 16px;}
+.two-col .column table:nth-last-child(2) td h1:last-child,.two-col .column table:nth-last-child(2) td h2:last-child,.two-col .column table:nth-last-child(2) td h3:last-child,.two-col .column table:nth-last-child(2) td p:last-child,.two-col .column table:nth-last-child(2) td ol:last-child,.two-col .column table:nth-last-child(2) td ul:last-child {Margin-bottom: 28px;}
+.two-col h1 {font-size: 26px;Margin-bottom: 14px;}
+.two-col h2 {font-size: 18px;Margin-bottom: 10px;}
+.two-col h3 {font-size: 12px;Margin-bottom: 8px;}
+.two-col p,.two-col ol,.two-col ul {font-size: 14px;}
+.two-col ol,.two-col ul {Margin-left: 15px;}
+.two-col li {padding-left: 3px;}
+.wrapper .two-col blockquote {padding-left: 13px;}
+.three-col .column table:nth-last-child(2) td h1:last-child,.three-col .column table:nth-last-child(2) td h2:last-child,.three-col .column table:nth-last-child(2) td h3:last-child,.three-col .column table:nth-last-child(2) td p:last-child,.three-col .column table:nth-last-child(2) td ol:last-child,.three-col .column table:nth-last-child(2) td ul:last-child {Margin-bottom: 18px;}
+.three-col h1 {font-size: 18px;Margin-bottom: 12px;}
+.three-col h2 {font-size: 16px;Margin-bottom: 8px;}
+.three-col h3 {font-size: 12px;Margin-bottom: 6px;}
+.three-col p,.three-col ol,.three-col ul {font-size: 12px;}
+.three-col ol,.three-col ul {Margin-left: 15px;}
+.three-col li {padding-left: 4px;}
+.wrapper .three-col blockquote {padding-left: 13px;}
+.one-col-feature .column {padding-top: 32px;padding-bottom: 32px;width: 600px;}
+.one-col-feature .border {font-size: 3px;line-height: 3px;Margin-left: 32px;Margin-right: 32px;}
+.one-col-feature h1,.one-col-feature h2,.one-col-feature h3,.one-col-feature p,.one-col-feature .btn {text-align: center;}
+.one-col-feature h1 {font-size: 42px;Margin-bottom: 26px;}
+.one-col-feature h2 {font-size: 32px;Margin-bottom: 20px;}
+.one-col-feature h3 {font-size: 26px;Margin-bottom: 18px;}
+.one-col-feature p,.one-col-feature ol,.one-col-feature ul {font-size: 21px;}
+.one-col-feature ol {Margin-left: 31px;}
+.one-col-feature ol li {padding-left: 0;}
+.one-col-feature ul {Margin-left: 23px;}
+.one-col-feature ul li {padding-left: 9px;}
+.wrapper .one-col-feature blockquote {border-left: none;Margin-left: 0;padding-left: 0;}
+.one-col-feature blockquote p,.one-col-feature blockquote ol,.one-col-feature blockquote ul {font-style: italic;}
+.one-col-feature .contents:nth-last-child(2) h1:last-child,.one-col-feature .contents:nth-last-child(2) h2:last-child,.one-col-feature .contents:nth-last-child(2) h3:last-child,.one-col-feature .contents:nth-last-child(2) p:last-child,.one-col-feature .contents:nth-last-child(2) ul:last-child,.one-col-feature .contents:nth-last-child(2) ol:last-child,.one-col-feature .contents:nth-last-child(2) blockquote:last-child *:last-child {Margin-bottom: 36px !important;}
+.one-col-feature .column-top {font-size: 32px;line-height: 32px;}
+.one-col-feature .column-bottom {font-size: 6px;line-height: 6px;}
+.preheader,.footer {width: 100%;}
+.one-col,.two-col,.three-col,.one-col-feature {table-layout: fixed;}
+.one-col h1 a,.two-col h1 a,.three-col h1 a {border: none;}
+.two-col .first .padded {padding-left: 32px;padding-right: 16px;}
+.two-col .second .padded {padding-left: 16px;padding-right: 32px;}
+.header {width: 100%;}
+.logo {padding-top: 32px;padding-bottom: 10px;width: 600px;}
+.logo div {font-size: 36px;font-weight: 400;line-height: 46px;}
+.logo div a {text-decoration: none;border: none;}
+.logo div.logo-center {text-align: center;}
+.logo div.logo-center img {Margin-left: auto;Margin-right: auto;}
+.footer .inner {width: 600px;}
+.footer .padded {padding: 0;Margin-left: 20px;Margin-right: 20px;}
+.footer .social,
+.footer .campaign {padding-top: 40px;padding-bottom: 75px;text-align: left;}
+.footer .campaign {font-size: 11px;line-height: 17px;}
+.footer .social {font-size: 10px;text-transform: uppercase;width: 170px;}
+.footer .social a {line-height: 12px;}
+.footer .social .padded div {Margin-bottom: 10px;}
+.footer .social img {vertical-align: middle;}
+.footer .social span {mso-text-raise: 11px;}
+ol.white li a {color:#fff !important;}
+ol.white li a:hover {color:#fff !important;}
+@media only screen and (max-width: 620px) {
+  [class=wrapper] blockquote {border-left-width: 5px !important;padding-left: 15px !important;}
+  [class=wrapper] .preheader .title {display: none;}
+  [class=wrapper] .preheader .webversion {text-align: center !important;}
+  [class=wrapper] .logo {width: 280px !important;padding-left: 10px !important;padding-right: 10px !important;}
+  [class=wrapper] .logo img {max-width: 280px !important;height: auto !important;}
+  [class=wrapper] h1 {font-size: 36px !important;margin-bottom: 18px !important;}
+  [class=wrapper] h2 {font-size: 24px !important;margin-bottom: 12px !important;}
+  [class=wrapper] h3 {font-size: 14px !important;margin-bottom: 10px !important;}
+  [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h1:last-child,[class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h1:last-child,[class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h1:last-child,[class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h2:last-child,[class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h2:last-child,[class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h2:last-child,[class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h3:last-child,[class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h3:last-child,[class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h3:last-child,[class=wrapper] .one-col .column:last-child table:nth-last-child(2) td p:last-child,[class=wrapper] .two-col .column:last-child table:nth-last-child(2) td p:last-child,[class=wrapper] .three-col .column:last-child table:nth-last-child(2) td p:last-child,[class=wrapper] .one-col .column:last-child table:nth-last-child(2) td ol:last-child,[class=wrapper] .two-col .column:last-child table:nth-last-child(2) td ol:last-child,[class=wrapper] .three-col .column:last-child table:nth-last-child(2) td ol:last-child,[class=wrapper] .one-col .column:last-child table:nth-last-child(2) td ul:last-child,[class=wrapper] .two-col .column:last-child table:nth-last-child(2) td ul:last-child,[class=wrapper] .three-col .column:last-child table:nth-last-child(2) td ul:last-child {Margin-bottom: 25px !important;}
+  [class=wrapper] .one-col p,[class=wrapper] .two-col p,[class=wrapper] .three-col p,[class=wrapper] .one-col ol,[class=wrapper] .two-col ol,[class=wrapper] .three-col ol,[class=wrapper] .one-col ul,[class=wrapper] .two-col ul,[class=wrapper] .three-col ul {font-size: 16px !important;}
+  [class=wrapper] ol,[class=wrapper] ul {margin-left: 17px;}
+  [class=wrapper] li {padding-left: 4px;}
+  [class=wrapper] .hr {Margin: 0 auto 25px auto !important;width: 60px;}
+  [class=wrapper] .separator {width: 320px !important;}
+  [class=wrapper] .column-bottom {font-size: 17px !important;line-height: 17px !important;}
+  [class=wrapper] .first .column-bottom,[class=wrapper] .three-col .second .column-bottom {display: none;}
+  [class=wrapper] .second .column-top,[class=wrapper] .third .column-top {display: none;}
+  [class=wrapper] .one-col-feature h1 {font-size: 36px !important;margin-bottom: 22px !important;}
+  [class=wrapper] .one-col-feature h2 {font-size: 26px !important;margin-bottom: 18px !important;}
+  [class=wrapper] .one-col-feature h3 {font-size: 24px !important;margin-bottom: 16px !important;}
+  [class=wrapper] .one-col-feature p,[class=wrapper] .one-col-feature ol,[class=wrapper] .one-col-feature ul {font-size: 18px !important;}
+  [class=wrapper] .one-col-feature ol {margin-left: 28px !important;}
+  [class=wrapper] .one-col-feature ol li {padding-left: 0 !important;}
+  [class=wrapper] .one-col-feature ul {margin-left: 20px !important;}
+  [class=wrapper] .one-col-feature ul li {padding-left: 8px !important;}
+  [class=wrapper] .one-col-feature blockquote {border-left: none !important;padding-left: 0 !important;}
+  [class=wrapper] .footer td {display: none;}
+  [class=wrapper] .footer .inner {display: block !important;padding-top: 15px !important;padding-bottom: 10px !important;width: auto !important;}
+  [class=wrapper] .footer table {margin-left: auto !important;margin-right: auto !important;width: auto !important;}
+  [class=wrapper] .footer .campaign,[class=wrapper] .footer .social {display: block !important;padding-top: 15px !important;padding-bottom: 10px !important;text-align: center !important;width: 320px !important;}
+  [class=wrapper] .footer .padded {margin: 0 !important;}
+}
+</style>
+    <!--[if (gte mso 9)|(IE)]>
+    <style>
+      body {background-color: #ffffff;}
+      li {padding-left: 5px !important;margin-left: 10px !important;}
+      ol, ul {margin-left: 20px !important;}
+      .feature ol, .feature ul {margin-left: 28px !important;}
+      .feature li {padding-left: 1px !important;}
+      .column-top {mso-line-height-rule: exactly !important;}
+    </style>
+    <![endif]-->
+  <meta name="robots" content="noindex,nofollow"></meta>
+<meta property="og:title" content="Autumn is coming!"></meta>
+<link href="https://css.createsend1.com/css/social.min.css?h=ACA06D86dragonfruit" media="screen,projection" rel="stylesheet" type="text/css" />
 </head>
-<body style="margin:0px; padding:0px;" color="#000032" bgcolor="#eaf0f0" link="#ef2678" vlink="#be236e" style="-webkit-text-size-adjust: none;" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-
-  <!-- 100% wrapper (grey background) -->
-  <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0">
-    <tr>
-      <td align="center">
-
-        <table class="container" border="0" width="640" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0" align="center">
-          <tr>
-            <td height="15">
-              <img src="px.gif" border="0" alt="" height="15" width="1">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <!-- logo -->
-              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0" align="center">
-                <tr>
-                  <td width="40%">
-                    <a href="http://antistatique.net" target="_blank"><img src="logo.png" alt="Antistatique" border="0" width="80%"></a>
-                  </td>
-                  <td align="right" valign="middle">
-                    <div class="newsletter_intro"><singleline label="newsletter_title">Notre super newsletter</singleline></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" height="2">
-                    <img src="px.gif" border="0" alt="" height="2" width="2">
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Cover photo -->
-              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#4c4c6f" align="center">
-                <tr>
-                  <td>
-                    <img src="mai2015.png" alt="" width="640" editable="true" class="item_img">
-                  </td>
-                </tr>
-              </table>
-
-              <!-- Intro -->
-             <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                  <tr>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                    <td>
-                      <p class="bloc_title">
-                        <singleline label="bloc_title">
-                          Summer is coming!
-                        </singleline>
-                      </p>
-                      <div class="bloc_text">
-                        <multiline label="bloc_content">
-                          <p>
-                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
-                          </p>
-                          <p>
-                            Bonne lecture,
-                          </p>
-                          <p>
-                            — l’équipe Antistatique
-                          </p>
-                        </multiline>
-                      </div>
-                    </td>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                </table>
-
-              <!-- TOC -->
-              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ef2678">
-                <tr>
-                  <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20" bgcolor="#ef2678"></td>
-                </tr>
-                <tr>
-                  <td width="20" bgcolor="#ef2678">
-                    <img src="px.gif" border="0" alt="" height="20" width="20">
-                  </td>
-                  <td bgcolor="#ef2678" width="100%">
-
-                    <ol class="table_of_content" style="color:#ffffff">
-                      <tableofcontents>
-                        <li style="margin-bottom:4px;">
-                          <repeatertitle />
-                        </li>
-                      </tableofcontents>
-                    </ol>
-                  </td>
-                  <td width="20" bgcolor="#ef2678">
-                    <img src="px.gif" border="0" alt="" height="20" width="20">
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20" bgcolor="#ef2678"></td>
-                </tr>
-              </table>
-
-
-              <repeater>
-
-                <!-- Titre, texte -->
-                <layout label='Titre, texte'>
-                 <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                  <tr>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                    <td>
-                      <p class="bloc_title">
-                        <singleline label="bloc_title" repeatertitle='true'>
-                          Summer is coming!
-                        </singleline>
-                      </p>
-                      <div class="bloc_text">
-                        <multiline label="bloc_content">
-                          <p>
-                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
-                          </p>
-                          <p>
-                            Bonne lecture,
-                          </p>
-                          <p>
-                            — l’équipe Antistatique
-                          </p>
-                        </multiline>
-                      </div>
-                    </td>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                  <!-- <tr bgcolor="#4c4c6f">
-                    <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
-                  </tr> -->
-                </table>
-              </layout>
-
-              <!-- Titre, image et texte -->
-              <layout label='Titre, image et texte'>
-                <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                  <tr>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                    <td>
-                      <p class="bloc_title">
-                        <singleline label="bloc_title" repeatertitle='true'>
-                          Summer is coming!
-                        </singleline>
-                      </p>
-                      <div class="container_img"><img src="image_temp.png" alt="" editable="true" class="item_img" width="600"></div>
-                      <div class="bloc_text">
-                        <multiline label="bloc_content">
-                          <p>
-                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
-                          </p>
-                          <p>
-                            Bonne lecture,
-                          </p>
-                          <p>
-                            — l’équipe Antistatique
-                          </p>
-                        </multiline>
-                      </div>
-                    </td>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                  <tr bgcolor="#4c4c6f">
-                    <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
-                  </tr>
-                </table>
-              </layout>
-
-              <!-- Titre, image texte, image et texte -->
-              <layout label='Titre, image texte, image et texte'>
-                <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                  <tr>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                    <td>
-                      <p class="bloc_title">
-                        <singleline label="bloc_title" repeatertitle='true'>
-                          Summer is coming!
-                        </singleline>
-                      </p>
-                      <div class="container_img"><img src="image_temp.png" alt="" editable="true" class="item_img" width="600"></div>
-                      <div class="bloc_text">
-                        <multiline label="bloc_content">
-                          <p>
-                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
-                          </p>
-                        </multiline>
-                      </div>
-                      <div class="container_img"><img src="image_temp.png" alt="" editable="true" class="item_img" width="600"></div>
-                      <div class="bloc_text">
-                        <multiline label="bloc_content">
-                          <p>
-                            L’équipe prend du bon temps sur les projets. Et les premières semaines du printemps nous donnent des ailes et des idées. C’est avec plaisir que nous partageons avec vous ces bonnes nouvelles, ces projets et un brin de douceur estivale !
-                          </p>
-                        </multiline>
-                      </div>
-                    </td>
-                    <td width="20">
-                      <img src="px.gif" border="0" alt="" height="20" width="20">
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-                  </tr>
-                  <tr bgcolor="#4c4c6f">
-                    <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
-                  </tr>
-                </table>
-              </layout>
-
-            </repeater>
-
-            <!-- Contact et RS -->
-            <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
-              <tr>
-                <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-              </tr>
-              <tr>
-                <td width="20">
-                  <img src="px.gif" border="0" alt="" height="20" width="20">
-                </td>
-                <td>
-                  <p class="bloc_title">
-                    <singleline label="contact_title">
-                      Prendre contact avec nous
-                    </singleline>
-                  </p>
-                  <div class="bloc_text">
-                    <multiline label="contact_content">
-                      <p>
-                        +41 21 623 63 03 ou <a href="mailto:hello@antistatique.net">hello@antistatique.net</a>
-                        <br>
-                        <strong>Lausanne</strong> › Rue de Sébeillon 9b <br>
-                        <strong>Genève</strong> › Impact Hub Geneva, Rue Fendt 1
-                      </p>
-                    </multiline>
-                  </div>
-                </td>
-                <td width="20">
-                  <img src="px.gif" border="0" alt="" height="20" width="20">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-              </tr>
-              <tr>
-                <td width="20">
-                  <img src="px.gif" border="0" alt="" height="20" width="20">
-                </td>
-                <td>
-                  <div class="bloc_text">
-                  <p>
-                    <singleline label="contact_rs_title">
-                      et sur les réseaux sociaux
-                    </singleline>
-                  </p>
-                  </div>
-                  <table border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <td width="46">
-                          <a href="http://github.com/antistatique" target="_blank">
-                            <img src="github.png" alt="github" width="46" height="46" border="0">
-                          </a>
-                        </td>
-                        <td width="46">
-                          <a href="http://facebook.com/Antistatique" target="_blank">
-                            <img src="facebook.png" alt="facebook" width="46" height="46" border="0">
-                          </a>
-                        </td>
-                        <td width="46">
-                          <a href="http://instagram.com/antistatique" target="_blank">
-                            <img src="instagram.png" alt="instagram" width="46" height="46" border="0">
-                          </a>
-                        </td>
-                        <td width="46">
-                          <a href="http://www.linkedin.com/company/antistatique.net" target="_blank">
-                            <img src="linkedin.png" alt="linkedin" width="46" height="46" border="0">
-                          </a>
-                        </td>
-                        <td width="46">
-                          <a href="http://twitter.com/antistatique" target="_blank">
-                            <img src="twitter.png" alt="twitter" width="46" height="46" border="0">
-                          </a>
-                        </td>
-                  </tr>
-                  </table>
-                </td>
-                <td width="20">
-                  <img src="px.gif" border="0" alt="" height="20" width="20">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3" height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
-              </tr>
-              <tr bgcolor="#4c4c6f">
-                <td colspan="3" height="1" bgcolor="#4c4c6f"><img src="px.gif" border="0" alt="" height="1" width="1"></td>
-              </tr>
-            </table>
-
-            <!-- Pref et unsubscribe -->
-              <table border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0" align="center">
-                <tr>
-                  <td colspan="2" height="40">
-                    <img src="px.gif" border="0" alt="" height="40" width="1">
-                  </td>
-                </tr>
-                <tr>
-                  <td align="left">
-                  <div class="bloc_text bloc_footer">
-                  <p>Editez vos <preferences>pr&eacute;f&eacute;rences</preferences> ou <unsubscribe>d&eacute;sinscrivez-vous</unsubscribe> de notre newsletter.</p>
-                  <multiline label="unsubscribe_pref_message">
-                  <br />
-                  Vous recevez cet email, car rappelez-vous, vous &ecirc;tes un client chanceux d'Antistatique
-                  ou inscrit via notre site.<br />
-                  Si vous ne voyez pas correctement cet e-mail <webversion style="color:#ef2678;text-decoration:underline;">consultez la version web</webversion> 
-                  </multiline>
-                  </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" height="40">
-                    <img src="px.gif" border="0" alt="" height="40" width="1">
-                  </td>
-                </tr>
-              </table>
-
-
+  <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%"><style type="text/css">
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400italic,400,700,700italic);.wrapper,.separator,.header,.one-col-bg,.two-col-bg,.three-col-bg,.one-col-feature-bg{background-color:#ebf1f1}h1{color:#202020}.wrapper h1{}.wrapper h1{font-family:sans-serif}h1{}.one-col h1{line-height:44px}.two-col h1{line-height:34px}.three-col h1{line-height:26px}.one-col-feature h1{line-height:50px}@media only screen and (max-width: 620px){h1{line-height:44px !important}}h2{color:#202020}.wrapper h2{}.wrapper h2{font-family:sans-serif}h2{}.one-col h2{line-height:32px}.two-col h2{line-height:26px}.three-col h2{line-height:22px}.one-col-feature h2{line-height:40px}@media only screen and (max-width: 620px){h2{line-height:32px !important}}h3{color:#555}.wrapper h3{}.wrapper h3{font-family:sans-serif}h3{}.one-col h3{line-height:22px}.two-col h3{line-height:20px}.three-col
+h3{line-height:20px}.one-col-feature h3{line-height:34px}@media only screen and (max-width: 620px){h3{line-height:22px !important}}p,ol,ul{color:#484b61}.wrapper p,.wrapper ol,.wrapper ul{}.wrapper p,.wrapper ol,.wrapper ul{font-family:sans-serif}p,ol,ul{}.one-col p,.one-col ol,.one-col ul{line-height:25px;Margin-bottom:25px}.two-col p,.two-col ol,.two-col ul{line-height:22px;Margin-bottom:22px}.three-col p,.three-col ol,.three-col ul{line-height:18px;Margin-bottom:18px}.one-col-feature p,.one-col-feature ol,.one-col-feature ul{line-height:29px;Margin-bottom:29px}@media only screen and (max-width: 620px){p,ol,ul{line-height:25px !important;Margin-bottom:25px !important}}.image{color:#fff}.image{font-family:sans-serif}.wrapper h1 a,.wrapper h2 a,.wrapper h3 a,.wrapper p a,.wrapper li a{border-bottom:1px solid #e72d79;color:#e72d79}.wrapper h1 a:hover,.wrapper h2 a:hover,.wrapper h3
+a:hover,.wrapper p a:hover,.wrapper li a:hover{border-bottom:1px solid #ca1760 !important;color:#ca1760 !important}.wrapper .logo div{color:#202020}.wrapper .logo div{font-family:Georgia,serif}@media only screen and (min-width: 0){.wrapper .logo div{font-family:Merriweather,Georgia,serif !important}}.wrapper .logo div a{color:#202020}.wrapper .logo div a:hover{color:#202020 !important;border:none !important}.wrapper .preheader a,.wrapper .footer a{color:#484b61}.wrapper .preheader a:hover,.wrapper .footer a:hover{color:#323444 !important;border:none !important}.wrapper .one-col-feature h1 a,.wrapper .one-col-feature h2 a,.wrapper .one-col-feature h3 a,.wrapper .one-col-feature p a,.wrapper .one-col-feature li a{border-bottom:1px solid #e72d79;color:#e72d79}.wrapper .one-col-feature h1 a:hover,.wrapper .one-col-feature h2 a:hover,.wrapper .one-col-feature h3 a:hover,.wrapper
+.one-col-feature p a:hover,.wrapper .one-col-feature li a:hover{border-bottom:1px solid #ca1760 !important;color:#ca1760 !important}.wrapper blockquote{border-left:5px solid #d1dbdb}.btn a{}.wrapper .btn a{}.wrapper .btn a{font-family:sans-serif}.wrapper .btn a{background-color:#e72d79;color:#fff}.wrapper .btn a:hover{color:#fff !important}.hr{background-color:#d1dbdb}.one-col-feature .border{background-color:#d1dbdb}.one-col-feature hr{background-color:#d1dbdb;color:#d1dbdb}.preheader td,.footer .address,.footer .campaign,.footer p{color:#484b61}.preheader td,.footer .address,.footer .campaign,.footer p{font-family:sans-serif}.social a{}.social a{font-family:sans-serif}.footer,.footer .one-col{background-color:#dbe4e4}.emb-editor-canvas{background-color:#dbe4e4}@media
+(min-width:0){body{background-color:#dbe4e4}}
+</style>
+    <center class="wrapper" style="display: table;table-layout: fixed;width: 100%;min-width: 620px;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+      <table class="preheader" style="border-collapse: collapse;border-spacing: 0;font-size: 11px;line-height: 17px;width: 100%">
+        <tbody><tr>
+          <td class="title" style="padding: 9px;vertical-align: top;color: #484b61;font-family: sans-serif;text-align: left;width: 50%;">
+            <div><singleline label='Intro phrase'>L'&#233;t&#233; se termine, le web continue de bouger!</singleline></div>
+          </td>
+          <td class="webversion" style="padding: 9px;vertical-align: top;color: #484b61;font-family: sans-serif;text-align: right;width: 50%;">
+            Pas d'images? <webversion style="border: none !important;font-weight: 700;letter-spacing: 0.01em;transition: opacity 0.2s ease-in;text-decoration: none;color: #484b61">Version web</webversion>
           </td>
         </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-</body>
-</html>
+      </tbody></table>
+      <table class="header" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1" align="center">
+        <tbody><tr>
+          <td style="padding: 0;vertical-align: top">&nbsp;</td>
+          <td class="logo" style="padding: 0;vertical-align: top;mso-line-height-rule: at-least;padding-top: 32px;padding-bottom: 10px;width: 600px">
+            <div class="logo-left" style="font-size: 36px;font-weight: 400;line-height: 46px;color: #202020;font-family: Georgia,serif" align="left" id="emb-email-header"><a style="transition: opacity 0.2s ease-in;text-decoration: none;border: none;color: #202020" href="http://mailing.antistatique.net/t/r-l-ahjtuhy-l-r/"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 229px" src="https://i1.createsend1.com/ei/r/05/800/E5C/222139/csfinal/logo.png" alt="Antistatique" width="153" height="33"></a></div>
+          </td>
+          <td style="padding: 0;vertical-align: top">&nbsp;</td>
+        </tr>
+      </tbody></table>
+
+          <table class="one-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="one-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column" style="padding: 0;vertical-align: top;text-align: left">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 25px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <img editable label='cover' class="gnd-corner-image gnd-corner-image-center gnd-corner-image-top" style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 760px" src="https://i1.createsend1.com/ei/r/05/800/E5C/222139/csfinal/mai2015.png" alt="" width="600" height="600">
+            </div>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+<h1 style="Margin-top: 0;color: #202020;font-weight: 500;font-family: sans-serif;font-size: 36px;Margin-bottom: 18px;line-height: 44px"><strong style="font-weight: bold"><span><span>Summer was great!</span></span></strong></h1><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:#484b61">L'&#233;t&#233; n'est pas que synonyme de farniente et de cocktails.</span></p><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:#484b61">L&#8217;&#233;quipe a &#233;galement travaill&#233; passionn&#233;ment sur de nouveaux projets et d&#233;velopp&#233; de bonnes id&#233;es. &nbsp;Nous avions donc envie de vous partager ces bonnes nouvelles, ces projets et encore un brin de douceur estivale!
+</span></p><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:#484b61">Bonne lecture,</span></p><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:#484b61">&#8212; l&#8217;&#233;quipe Antistatique</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 17px;line-height: 17px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="one-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="one-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #e72d79;width: 600px;table-layout: fixed">
+                  <tbody><tr>
+                    <td class="column" style="padding: 0;vertical-align: top;text-align: left">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <ol class="white" style="Margin-top: 0;padding-left: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;Margin-left: 17px;line-height: 25px;Margin-bottom: 25px">
+                                <tableofcontents>
+                                  <li style="Margin-top: 0;padding-left: 4px;color:#fff"><repeatertitle/></li>
+                                </tableofcontents>
+                                <li style="Margin-top: 0;padding-left: 4px;color:#fff"><a href="#team">Notre équipe</a></li>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 17px;line-height: 17px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="one-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="one-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column" style="padding: 0;vertical-align: top;text-align: left">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+
+                        <repeater>
+
+                        <layout label='Standard Block'>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h2 style="Margin-top: 0;color: #202020;font-weight: 500;font-family: sans-serif;font-size: 24px;Margin-bottom: 12px;line-height: 32px"><strong style="font-weight: bold"><singleline label='Title' repeatertitle='true'>De nouveaux mandats !</singleline></strong></h2>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div style="height:12px">&nbsp;</div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 25px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <img editable label='Image' style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 100%" src="https://i2.createsend1.com/ei/r/05/800/E5C/222139/csfinal/logo-negative.png" alt="" width="100%" height="auto">
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <multiline label='Body'>
+                              <p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:rgb(72, 75, 97); font-family:sans-serif; font-size:16px; line-height:25px">Nous sommes plut&#244;t fiers de notre nouvelle collaboration avec le journal </span><a style="transition: opacity 0.2s ease-in;text-decoration: none;border-bottom: 1px solid #e72d79;color: #e72d79;font-family: sans-serif;font-size: 16px;line-height: 25px" data-emb-href-display="www.letemps.ch" href="http://mailing.antistatique.net/t/r-l-ahjtuhy-l-y/">Le Temps</a><span style="color:rgb(72, 75, 97); font-family:sans-serif; font-size:16px; line-height:25px">. Nous allons aider leurs &#233;quipes &#224; concevoir et mettre en place la
+</span><strong style="font-weight: bold;color: rgb(72, 75, 97);font-family: sans-serif;font-size: 16px;line-height: 25px">nouvelle version responsive</strong><span style="color:rgb(72, 75, 97); font-family:sans-serif; font-size:16px; line-height:25px"> du journal. Rendez-vous mi-septembre pour la mise en ligne !</span></p>
+                              </multiline>
+                            </td>
+                          </tr>
+                        </tbody></table>
+                        </layout>
+                        <layout label='Standard Block Without Title'>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div style="height:12px">&nbsp;</div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 25px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <img editable label='Image' style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 100%" src="https://i2.createsend1.com/ei/r/05/800/E5C/222139/csfinal/logo-negative.png" alt="" width="100%" height="auto">
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <multiline label='Body'>
+                              <p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:rgb(72, 75, 97); font-family:sans-serif; font-size:16px; line-height:25px">Nous sommes plut&#244;t fiers de notre nouvelle collaboration avec le journal </span><a style="transition: opacity 0.2s ease-in;text-decoration: none;border-bottom: 1px solid #e72d79;color: #e72d79;font-family: sans-serif;font-size: 16px;line-height: 25px" data-emb-href-display="www.letemps.ch" href="http://mailing.antistatique.net/t/r-l-ahjtuhy-l-y/">Le Temps</a><span style="color:rgb(72, 75, 97); font-family:sans-serif; font-size:16px; line-height:25px">. Nous allons aider leurs &#233;quipes &#224; concevoir et mettre en place la
+  </span><strong style="font-weight: bold;color: rgb(72, 75, 97);font-family: sans-serif;font-size: 16px;line-height: 25px">nouvelle version responsive</strong><span style="color:rgb(72, 75, 97); font-family:sans-serif; font-size:16px; line-height:25px"> du journal. Rendez-vous mi-septembre pour la mise en ligne !</span></p>
+                              </multiline>
+                            </td>
+                          </tr>
+                        </tbody></table>
+                        </layout>
+
+                        <layout label='spacer'>
+                        <singleline/>
+                        <div class="spacer" style="font-size: 1px;line-height: 34px;width: 100%">&nbsp;</div>
+                        </layout>
+                </repeater>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h2 id="team" style="Margin-top: 0;color: #202020;font-weight: 500;font-family: sans-serif;font-size: 24px;Margin-bottom: 25px;line-height: 32px"><strong style="font-weight: bold">Notre &#233;quipe</strong></h2>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 17px;line-height: 17px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="three-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="three-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column first" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/alberto"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-alberto.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Alberto</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:#484b61">Digital Stragist &amp; Founder</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column second" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/gilles"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-gilles.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Gilles</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:#484b61">Web Software Engineer &amp; Founder</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column third" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/marc"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-marc.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Marc</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:#484b61">Software Designer &amp; Founder</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="three-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="three-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column first" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/yann"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-yann.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Yann</h3><h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 18px;line-height: 20px;text-align: center"><span style="color:rgb(72, 75, 97); font-family:sans-serif; font-weight:400">Frontend Developer</span></h3>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column second" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/philippe"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-philippe.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Philippe</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><font color="#484b61">Dynamic Business Catalyst</font></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column third" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/saniha"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-saniha.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Saniha</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:#484b61">Web Project Manager</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="three-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="three-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column first" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/guillaume"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-guillaume.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Guillaume</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><font color="#484b61">Visual Designer</font></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column second" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/sepehr"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-sepehr.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Sepehr</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:#484b61">Visual Designer</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column third" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/toni"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-toni.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Toni</h3><h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 18px;line-height: 20px;text-align: center"><font color="#484b61" face="sans-serif"><span style="font-weight:normal">Frontend Developer</span></font></h3>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="three-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="three-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column first" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/charlotte"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-charlotte.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Charlotte</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:rgb(72, 75, 97)">Office Manager</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column second" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/luc"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-luc.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 22px;padding-right: 22px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Luc</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:#484b61">Web Software Engineer</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column third" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/noemie"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-noemie.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 12px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">No&#233;mie</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:#484b61">UX Designer</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="three-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="three-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column first" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+
+            <div class="image" style="font-size: 12px;Margin-bottom: 18px;mso-line-height-rule: at-least;color: #fff;font-family: sans-serif" align="center">
+              <a href="http://antistatique.net/fr/meet/ludovic"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 180px" src="t-ludovic.png" alt="" width="156" height="156"></a>
+            </div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 12px;word-break: break-word;word-wrap: break-word">
+                              <h3 style="Margin-top: 0;color: #555;font-weight: 700;font-family: sans-serif;font-size: 12px;Margin-bottom: 6px;line-height: 20px;text-align: center">Ludovic</h3><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 12px;line-height: 18px;Margin-bottom: 18px;text-align: center"><span style="color:rgb(72, 75, 97)">Project Manager</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column second" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                    <td class="column third" style="padding: 0;vertical-align: top;text-align: left;width: 200px">
+
+                      <div class="column-bottom" style="font-size: 16px;line-height: 16px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="one-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="one-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column" style="padding: 0;vertical-align: top;text-align: left">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h2 style="Margin-top: 0;color: #202020;font-weight: 500;font-family: sans-serif;font-size: 24px;Margin-bottom: 12px;line-height: 32px"><strong style="font-weight: bold">Une id&#233;e, un projet, envie d'un caf&#233;?</strong></h2><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:#484b61">Nous serions ravis de collaborer pour votre prochain projet digital.</span></p>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+            <div class="btn" style="Margin-bottom: 25px;text-align: center">
+              <![if !mso]><a style="border-radius: 3px;display: inline-block;font-size: 14px;font-weight: 700;line-height: 24px;padding: 13px 35px 12px 35px;text-align: center;text-decoration: none !important;transition: opacity 0.2s ease-in;font-family: sans-serif;background-color: #e72d79;color: #fff" href="mailto:hello@antistatique.net">Contactez-nous</a><![endif]>
+            <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="mailto:hello@antistatique.net" style="width:175px" arcsize="7%" fillcolor="#E72D79" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,12px,0px,11px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:sans-serif;font-weight:700;mso-line-height-rule:exactly;mso-text-raise:4px">Contactez-nous</center></v:textbox></v:roundrect><![endif]--></div>
+
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 17px;line-height: 17px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table class="one-col-bg" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #ebf1f1">
+            <tbody><tr>
+              <td style="padding: 0;vertical-align: top" align="center">
+                <table class="one-col centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;background-color: #ffffff;width: 600px;table-layout: fixed" emb-background-style>
+                  <tbody><tr>
+                    <td class="column" style="padding: 0;vertical-align: top;text-align: left">
+                      <div><div class="column-top" style="font-size: 34px;line-height: 34px">&nbsp;</div></div>
+                        <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                          <tbody><tr>
+                            <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+                              <h2 style="Margin-top: 0;color: #202020;font-weight: 500;font-family: sans-serif;font-size: 24px;Margin-bottom: 12px;line-height: 32px"><strong style="font-weight: bold">Prenez contact avec nous</strong></h2><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:#484b61"><a href="tel:0041216236303">+41 21 623 63 03</a> &nbsp;ou &nbsp;<a style="transition: opacity 0.2s ease-in;text-decoration: none;border-bottom: 1px solid #e72d79;color: #e72d79" data-emb-href-display="hello@antistatique.net" href="mailto:hello@antistatique.net">hello@antistatique.net</a></span><br>
+                              <span style="color:#484b61"><strong style="font-weight: bold">Lausanne</strong> &#8250; Rue de S&#233;beillon 9b<br>
+                              <strong style="font-weight: bold">Gen&#232;ve</strong> &#8250; Impact Hub Geneva, Rue Fendt 1</span></p><p style="Margin-top: 0;color: #fff;font-weight: 400;font-family: sans-serif;font-size: 16px;line-height: 25px;Margin-bottom: 25px"><span style="color:#484b61">et sur les r&#233;seaux sociaux<br>
+                              <table border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                  <td width="46">
+                                    <a href="http://github.com/antistatique" target="_blank">
+                                      <img src="github.png" alt="github" width="46" height="46" border="0">
+                                    </a>
+                                  </td>
+                                  <td width="46">
+                                    <a href="http://facebook.com/Antistatique" target="_blank">
+                                      <img src="facebook.png" alt="facebook" width="46" height="46" border="0">
+                                    </a>
+                                  </td>
+                                  <td width="46">
+                                    <a href="http://instagram.com/antistatique" target="_blank">
+                                      <img src="instagram.png" alt="instagram" width="46" height="46" border="0">
+                                    </a>
+                                  </td>
+                                  <td width="46">
+                                    <a href="http://www.linkedin.com/company/antistatique.net" target="_blank">
+                                      <img src="linkedin.png" alt="linkedin" width="46" height="46" border="0">
+                                    </a>
+                                  </td>
+                                  <td width="46">
+                                    <a href="http://twitter.com/antistatique" target="_blank">
+                                      <img src="twitter.png" alt="twitter" width="46" height="46" border="0">
+                                    </a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody></table>
+
+                      <div class="column-bottom" style="font-size: 17px;line-height: 17px">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <div class="spacer" style="font-size: 1px;line-height: 34px;width: 100%">&nbsp;</div>
+
+      <table class="footer" style="border-collapse: collapse;border-spacing: 0;width: 100%;background-color: #dbe4e4">
+        <tbody><tr>
+          <td style="padding: 0;vertical-align: top">&nbsp;</td>
+          <td class="inner" style="padding: 0;vertical-align: top;width: 600px">
+            <table style="border-collapse: collapse;border-spacing: 0" width="100%">
+              <tbody><tr>
+                <td class="campaign" style="padding: 0;vertical-align: top;padding-top: 40px;padding-bottom: 75px;text-align: left;font-size: 11px;line-height: 17px;color: #484b61;font-family: sans-serif">
+                  <div class="padded" style="padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word;padding: 0;Margin-left: 20px;Margin-right: 20px">
+
+                    <div style="line-height: 17px; font-size: 17px;">&nbsp;</div>
+
+                    <div>
+                      <span>
+                      <span class="block">
+                        Vous recevez cet email car vous êtes un client d'Antistatique ou que vous vous êtes inscrit via notre site.<br>
+                        <preferences style="border: none !important;font-weight: 700;letter-spacing: 0.01em;transition: opacity 0.2s ease-in;text-decoration: none;color: #484b61" lang="fr-FR">
+                          Éditez vos préférences
+                        </preferences>
+                        <span class="hide">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                        <unsubscribe style="border: none !important;font-weight: 700;letter-spacing: 0.01em;transition: opacity 0.2s ease-in;text-decoration: none;color: #484b61">
+                          Se d&#233;sinscrire
+                        </unsubscribe>
+                      </span>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+          <td style="padding: 0;vertical-align: top">&nbsp;</td>
+        </tr>
+      </tbody></table>
+    </center>
+
+<div id="fb-root"></div>
+</body></html>
+
