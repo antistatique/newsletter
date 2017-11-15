@@ -21,13 +21,16 @@
     body {-webkit-text-size-adjust:none; -ms-text-size-adjust:none;margin:0; padding:0;font-family: helvetica, arial, Sans-serif;}
     table {border-spacing:0;}
     table td {border-collapse:collapse;}
-    .yshortcuts a {border-bottom: none !important;}
     img{
       display: block;
     }
     p{
       margin: 10px 0;
       padding: 0;
+    }
+    a{
+      text-decoration: underline;
+      color: #e30074;
     }
     ul{
       margin: 5px 0;
@@ -40,14 +43,26 @@
     }
     /* grid */
     .pagewrap{max-width:1600px;margin: 0 auto;display:table;}
-    #mainarticles{font-size:0;}
-    .article-url-attribution{padding:0;}
-    .vh-wrap a {text-decoration: none; color: #000032;}
-    .grid-container {display: grid; text-align:center;font-size:0;line-height:0; background: #111111!important;}
-    .grid-item{display:inline-block;width:100%;max-width:300px;font-size:16px;line-height: 22px;border-top: none!important;}
+    .wrap {padding: 10px;}
+    .wrap a {text-decoration: none; color: #000032;}
+    .social-item a {text-decoration: underline; color: #e30074;}
+    .grid-container {display: grid; grid-template-columns : 1fr 1fr 1fr 1fr; background: #eaf0f0!important; grid-gap : 10px;}
+    .grid-item .social-item {width:100%; min-width: 200px; font-size:16px;line-height: 22px;}
     .grid-item:hover {background: #e30074!important;background-image: none!important;}
-    .collaborateur {grid-column: 2 span; grid-row : 2 span;}
-    /* fin grid */
+    .collaborateur {grid-column: 2 span; }
+  
+    /*header*/
+    .preheader {border-collapse: collapse;border-spacing: 0;font-size: 11px;line-height: 17px;width: 100%}
+    .title {padding: 9px;vertical-align: top;color: #484b61;font-family: sans-serif;text-align: left;width: 50%;}
+    .webversion {padding: 9px;vertical-align: top;color: #484b61;font-family: sans-serif;text-align: right;width: 50%;}
+    .intro {max-width: 600px;}
+    
+    /* footer */
+
+    .footer {font-size: 11px;line-height: 17px;width: 100%;max-width: 600px;}
+    .texte-footer {padding: 9px;vertical-align: top;color: #484b61;font-family: sans-serif;text-align: left;}
+
+    /* general */
 
     .table_of_content li{
       list-style: none;
@@ -81,23 +96,25 @@
       font-family: helvetica, arial, Sans-serif;
       font-size: 12px;
     }
+  </style>
 
-
-
-    /* Constrain email width for small screens */
-    @media screen and (max-width: 760px) {
-      table[class="container"] {
-        width:96% !important;
-        margin-left: 2%!important;
-        margin-right: 2%!important;
-      }
-      img[class="item_img"]{
-        width: 100%!important;
-        height: auto!important;
-      }
-    }
-
-    /*
+  <style type="text/css">
+  @supports (display: grid) {
+    .grid-container{display:grid!important;grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-gap: 10px;}
+    .grid-item, {display:block;width:auto!important;max-width: 1600px!important;min-width: 100px!important;}
+  }
+       @media screen and (max-device-width:1350px), screen and (max-width:1350px)
+       {.grid-container{grid-template-columns: 1fr 1fr 1fr 1fr;}}
+       @media screen and (max-device-width:1050px), screen and (max-width:1050px)
+       {.grid-container{grid-template-columns: 1fr 1fr 1fr;}}
+       @media screen and (max-device-width:750px), screen and (max-width:750px)
+       { .grid-container{grid-template-columns: 1fr 1fr; }}
+       @media screen and (max-device-width:450px), screen and (max-width:450px)
+       {.grid-container{grid-template-columns: 1fr;}}
+       
+  </style>
+  <style type="text/css">
+      /*
     Corporate
     // Colors
       Primary palette
@@ -114,22 +131,97 @@
       #d2005a   strawberry
       #ff9600   sunshine
     */
-
-
   </style>
 </head>
-<body style="font-family: helvetica, arial, Sans-serif;margin:0!important;padding:0!important;width:100%!important;color:#000032;bgcolor:#eaf0f0;link:#e30074;vlink:#a60055;-webkit-text-size-adjust: none;">
+<body style="font-family: helvetica, arial, Sans-serif;margin:0!important;padding:0!important;width:100%!important;color:#000032;background-color:#eaf0f0;link:#e30074;vlink:#a60055;-webkit-text-size-adjust: none;">
   <div class="pagewrap">
+  <!--[if gte mso 9]>
+  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#ffffff">
+  <tr>
+  <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+  <td width="760" style="padding:20px;">
+  <![endif]-->
+    <header>  
+      <center>
+        <table class="preheader" border="0" width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td class="title">
+              <div>
+                <singleline label="Titre">L'&#233;t&#233; se termine, le web continue de bouger!</singleline>
+              </div>
+            </td>
+            <td class="webversion">
+              Pas d'images ? Voir la <webversion style="color:#e30074;text-decoration:underline;">Version web</webversion>
+            </td>
+          </tr>
+        </table>
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="15">
+              <img src="px.gif" border="0" alt="" height="15" width="1">
+            </td>
+          </tr>
+          <tr>
+            <td class="logo">
+              <div><a href="http://antistatique.net"><img style="border: 0;-ms-interpolation-mode: bicubic;display: block;max-width: 229px" src="logo.png" alt="Antistatique" width="153" height="33"></a></div>
+            </td>
+          </tr>
+        </table>
+        <!-- Intro -->
+        <layout label="Introduction">
+          <table class="intro" border="0" width="100%" cellpadding="0" cellspacing="0" bgcolor="#eaf0f0" align="center">
+            <tr>
+              <td height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+            </tr>
+            <tr>
+              <td>
+                  <h1>
+                    <singleline label="Titre de l'intro">
+                      La machine est en marche !
+                    </singleline>
+                  </h1>
+                  <div class="texte-intro">
+                    <multiline label="Texte de l'intro">
+                      <p>
+                          Des projets transatlantiques, des conférences aux quatre coins de l'Europe et plein de nouvelles têtes qui font grandir notre famille : 2017 est une année passionnante pour Antistatique !
+                          Nous sommes ravis de partager toutes ces bonnes nouvelles avec vous !
+                          Bonne lecture,
+                          <br><br>
+                          — l’équipe Antistatique
+                      </p>
+                    </multiline>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <td height="20"><img src="px.gif" border="0" alt="" height="20" width="20"></td>
+            </tr>
+          </table>
+        </layout>
+      </center>
+    </header>
+    <!--[if gte mso 9]>
+    </td>
+    <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+    </tr>
+    </table>
+    <![endif]-->
     <section id="mainarticles">
       <div class="grid-container">
+      <!--[if gte mso 9]>
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+      <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+      <td width="720">
+      <![endif]-->
         <!--<repeater>-->
           <!-- Mandats remportés -->
           <!-- <layout label="mandat"> -->
-            <div class="grid-item article" style="background-color:#b400dc;">
+            <div class="grid-item" style="background-color:#b400dc;">
               <article>
-                <div class="vh-wrap">
+                <div class="wrap">
                   <a href="#">
-                    <h5>Mandats remportés</h5>
+                    <h5>#MandatsRemportés</h5>
                     <h1>
                       <singleline label="Titre du mandat">Transports Lausannois</singleline>
                     </h1>
@@ -145,11 +237,11 @@
           <!-- </layout> -->
           <!-- Portfolios -->
           <!-- <layout label="portfolio"> -->
-            <div class="grid-item article" style="background-color:#40b3ff;">
+            <div class="grid-item" style="background-color:#40b3ff;">
               <article>
-                <div class="vh-wrap">
+                <div class="wrap">
                   <a href="#">
-                      <h5>Portfolio</h5>
+                      <h5>#Portfolio</h5>
                       <h1>
                         <singleline label="Titre du portfolio">Retraites Populaires</singleline>
                       </h1>
@@ -163,19 +255,19 @@
               </article>
             </div>
           <!-- </layout> -->
-           <!-- Collaborateur -->
+          <!-- Collaborateur -->
           <!-- <layout label="collaborateur"> -->
-            <div class="grid-item article" style="background-color:#d2005a;">
+            <div class="grid-item collaborateur" style="background-color:#d2005a;">
               <article>
-                <div class="vh-wrap">
+                <div class="wrap">
                   <a href="#">
-                      <h5>Collaborateur</h5>
+                      <h5>#Collaborateur</h5>
                       <h1>
-                        <singleline label="Prénom, nom et fonction du collaborateur">Romain vient compléter la team des Project Managers </singleline>
+                        <singleline label="Prénom, nom et fonction du collaborateur">Stefano, notre nouveau Vidéo Maker</singleline>
                       </h1>
                     <div>
                       <multiline label="Description du collaborateur">
-                      <p>Romain, c'est le passionné. Avec son caractère de fonceur, il adore quand ça bouge. Il aime relever des défis et remettre en question les idées pré-faites. Sa créativité l'aide à trouver des solutions et à faire avancer les projets. Il aime aussi la tranquillité et la sérénité de la montagne. Normal, il a passé une partie de son enfance en Valais, où il retourne régulièrement pour y faire de la marche en été ou de la peau de phoques en hiver.</p>
+                      <p>Stefano est le lausannois rêveur. Plein d’idées, il a déjà vécu 3 vies différentes dans sa tête. Il a commencé par la photo et a vite basculé dans la vidéo. Depuis, il ne fait que ça et quand il n’en fait pas, il les regarde pour être toujours à la pointe de l’actualité. Parfois, il a besoin de faire le vide, alors, il se réfugie dans le basket qu’il pratique depuis plus de 10 ans.</p>
                       </multiline>
                     </div>
                   </a>
@@ -185,11 +277,11 @@
           <!-- </layout> -->
           <!-- Blog -->
           <!-- <layout label="Blog"> -->
-            <div class="grid-item article" style="background-color:#ff9600;">
+            <div class="grid-item" style="background-color:#ff9600;">
               <article>
-                <div class="vh-wrap">
+                <div class="wrap">
                   <a href="#">
-                      <h5>Article</h5>
+                      <h5>#Article</h5>
                       <h1>
                         <singleline label="Titre du blog">Instagram est-il un levier indispensable à votre communication digitale?</singleline>
                       </h1>
@@ -203,13 +295,33 @@
               </article>
             </div>
           <!-- </layout> -->
+          <!-- Collaborateur -->
+          <!-- <layout label="collaborateur"> -->
+            <div class="grid-item collaborateur" style="background-color:#d2005a;">
+              <article>
+                <div class="wrap">
+                  <a href="#">
+                      <h5>#Collaborateur</h5>
+                      <h1>
+                        <singleline label="Prénom, nom et fonction du collaborateur">Romain vient compléter la team des Project Managers </singleline>
+                      </h1>
+                    <div>
+                      <multiline label="Description du collaborateur">
+                      <p>Romain, c'est le passionné. Avec son caractère de fonceur, il adore quand ça bouge. Il aime relever des défis et remettre en question les idées pré-faites. Sa créativité l'aide à trouver des solutions et à faire avancer les projets. Il aime aussi la tranquillité et la sérénité de la montagne. Normal, il a passé une partie de son enfance en Valais, où il retourne régulièrement pour y faire de la marche en été ou de la peau de phoques en hiver.</p>
+                      </multiline>
+                    </div>
+                  </a>
+                </div>
+              </article>
+            </div>
+          <!-- </layout> -->
           <!-- Service -->
           <!-- <layout label="Skill"> -->
-            <div class="grid-item article" style="background-color:#808098;">
+            <div class="grid-item" style="background-color:#808098;">
               <article>
-                <div class="vh-wrap">
+                <div class="wrap">
                   <a href="#">
-                      <h5>Skill</h5>
+                      <h5>#Skill</h5>
                       <h1>
                         <singleline label="Titre du skill">Vidéo</singleline>
                       </h1>
@@ -225,7 +337,140 @@
           <!-- </layout> -->
         <!--</repeater>-->
       </div>
+      <!--[if gte mso 9]>
+      </td>
+      <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+      </tr>
+      </table>
+      <![endif]-->
     </section>
+    <!--[if gte mso 9]>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#333333">
+    <tr>
+    <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+    <td width="720" style="padding:20px;">
+    <![endif]-->
+    <div class="pagewrap">
+      <!--[if gte mso 9]>
+      </td>
+      <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+      </tr>
+      </table>
+      <![endif]-->
+      <section id="mainarticles">
+        <div class="grid-container">
+        <!--[if gte mso 9]>
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr>
+        <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+        <td width="720">
+        <![endif]-->
+          <div class="social-item">
+            <article>
+              <div class="wrap">
+                <a href="#"><h1>Twitter</h1></a>
+                  <div>
+                    <p>Pour les pouls live des membres de l'équipe. Nos pensées quotidiennes, les projets qui font parler et les gifs animés !</p>
+                  </div>
+              </div>
+            </article>
+          </div>
+          <div class="social-item">
+            <article>
+              <div class="wrap">
+                <a href="#"><h1>Facebook</h1></a>
+                  <div>
+                    <p>Un peu pour tout le reste. Actualités du web, soutien aux amis, réactions et échanges, musiques et idées de sorties.</p>
+                  </div>
+              </div>
+            </article>
+          </div>
+          <div class="social-item">
+            <article>
+              <div class="wrap">
+                <a href="#"><h1>Instragram</h1></a>
+                  <div>
+                    <p>Pour les instants de vie de l'agence, les découvertes et les bons moments partagés.</p>
+                  </div>
+              </div>
+            </article>
+          </div>
+          <div class="social-item">
+            <article>
+              <div class="wrap">
+                <h1><a href="#">Linkedin</a></h1>
+                  <div>
+                    <p>Pour la partie business, les nouveaux mandats, nos événements et publications, ainsi que le recrutement.</p>
+                  </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!--[if gte mso 9]>
+      </td>
+      <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+      </tr>
+      </table>
+      <![endif]-->
+      </section>
+    </div>
+    <!--[if gte mso 9]>
+    </td>
+    <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+    </tr>
+    </table>
+    <![endif]-->
+    <!--[if gte mso 9]>
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#333333">
+    <tr>
+    <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+    <td width="760" style="padding:20px;">
+    <![endif]-->
+    <center>
+      <footer>
+        <div class="footer">
+          <table border="0" width="100%" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td height="40">
+                <img src="px.gif" border="0" alt="" height="40" width="1">
+              </td>
+            </tr>
+            <tr>
+              <td align="left">
+                <div class="texte-footer">
+                <multiline label="contact">
+                  <b>Lausanne</b> Rue de Sébeillon 9b, 1004 Lausanne - <a href="#">+41 21 623 63 03</a><br />
+                  <b>Genève</b> Rue Fendt 1, 1201 Genève - <a href="#">+41 22 552 03 06</a><br />
+                  <b>Miami</b> 44 W Flagler Street, Suite 9000, Miami, FL, 33130 - <a href="#">+1 702 325 4325</a><br />
+                  </multiline>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td align="left">
+                <div class="texte-footer">
+                <multiline label="message de désinscription">
+                  Vous recevez cette newsletter parce que vous êtes client ou partenaire d'Antistatique, ou parce que vous vous êtes directement inscrits à notre newsletter. <br />
+                  </multiline>
+                  <p>Mettre à jour vos <preferences style="color:#e30074;">préférences</preferences> | <unsubscribe style="color:#e30074;">se désinscrire</unsubscribe></p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td height="40">
+                <img src="px.gif" border="0" alt="" height="40" width="1">
+              </td>
+            </tr>
+          </table>
+        </div>
+      </footer>
+    </center>
+    <!--[if gte mso 9]>
+    </td>
+    <td style="font-size:0px;line-height:0px;">&nbsp;</td>
+    </tr>
+    </table>
+    <![endif]-->
   </div>
 </body>
 </html>
