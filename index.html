@@ -207,6 +207,53 @@ Bring inline: Yes. */
         transform: rotate(360deg);
       }
     }
+    
+    .magic-hand{
+      animation: godown 0.8s infinite;
+      animation-direction: alternate;
+    }
+    @keyframes godown {
+      from {
+        transform: translateY(0px);
+      }
+
+      to {
+        transform: translateY(15px);
+      }
+    }
+    
+    .magic-boom{
+      animation: explode 6s infinite;
+      animation-timing-function: cubic-bezier(0.96, 0.04, 0.29, 1.68);
+      animation-delay: 3s;
+    }
+    @keyframes explode {
+      0% {
+        transform: scale(0);
+      }
+      4% {
+        transform: scale(1.6);
+        opacity: 1
+        transform: translateY(-4px);
+      }
+      4.3%{
+        transform: rotate(5deg);
+      }
+      4.6%{
+        transform: rotate(-5deg);
+      }
+      4.8%{
+        transform: rotate(5deg);
+      }
+      5% {
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(0.8);
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
 
     .shine-star{
       opacity:1;  
@@ -263,6 +310,10 @@ Bring inline: Yes. */
       table {
         background-color: #000032 !important;
       }
+      
+      table.balsamic, table.balsamic table {
+        background-color: #570039 !important;
+      }
 
       .hr-table {
         background-color: #ff0099 !important;
@@ -291,70 +342,136 @@ Bring inline: Yes. */
 </head>
 
 <body>
-  <!-- HEADER -->
-  <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#000032">
-    <tr>
-      <td>
-        <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-          <tr>
-            <td colspan="2" align="center">
-              <img src="px.gif" alt="spacer" height="21">
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
-            </td>
-            <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-              <singleline label="date">Janvier 2021</singleline>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
-              <img src="px.gif" alt="spacer" height="42">
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2">
-              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                <tr>
-                  <td width="5%">
-                    <img src="px.gif" alt="spacer" width="1">
-                  </td>
-                  <td valign="bottom" align="left" width="10%">
-                    <img src="title_union.png" class="roll-star" style="max-width:70px" width="100%">
-                  </td>
-                  <td align="center" width="50%">
-                    <img src="title_agence_evolue.png" style="max-width:300px;" width="100%">
-                  </td>
-                  <td width="3%">
-                    <img src="title_confetti.png" class="shine-star" style="max-width: 25px;" width="100%">
-                  </td>
-                  <td width="3%">
-                    <img src="title_confetti.png" class="shine-star shine-star-2" style="margin-bottom:4em;max-width: 25px;" width="100%">
-                  </td>
-                  <td width="3%">
-                    <img src="title_confetti.png" class="shine-star shine-star-3" style="margin-top:1em;max-width: 25px;" width="100%">
-                  </td>
-                  <td width="5%">
-                    <img src="px.gif" alt="spacer" width="1">
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
-              <img src="px.gif" alt="spacer" height="42">
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+  
 
   <repeater>
-
+    <layout label="header">
+      <!-- HEADER -->
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#000032">
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="21">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
+                </td>
+                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                  <singleline label="date">Janvier 2021</singleline>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="42">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                    <tr>
+                      <td width="5%">
+                        <img src="px.gif" alt="spacer" width="1">
+                      </td>
+                      <td valign="bottom" align="left" width="10%">
+                        <img src="title_union.png" class="roll-star" style="max-width:70px" width="100%">
+                      </td>
+                      <td align="center" width="50%">
+                        <img src="title_agence_evolue.png" style="max-width:300px;" width="100%">
+                      </td>
+                      <td width="3%">
+                        <img src="title_confetti.png" class="shine-star" style="max-width: 25px;" width="100%">
+                      </td>
+                      <td width="3%">
+                        <img src="title_confetti.png" class="shine-star shine-star-2" style="margin-bottom:4em;max-width: 25px;" width="100%">
+                      </td>
+                      <td width="3%">
+                        <img src="title_confetti.png" class="shine-star shine-star-3" style="margin-top:1em;max-width: 25px;" width="100%">
+                      </td>
+                      <td width="5%">
+                        <img src="px.gif" alt="spacer" width="1">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="42">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </layout>
+    <layout label="header-balsamic">
+      <!-- HEADER -->
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#570039" class="balsamic">
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="21">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
+                </td>
+                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                  <singleline label="date">Janvier 2021</singleline>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="42">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                    <tr>
+                      <td colspan="4" align="center">
+                        <img src="banner_intro_design_trust_hand.png" class="magic-hand" style="margin-right: 10%;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="4" align="center">
+                        <img src="px.gif" alt="spacer" width="10" height="10">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="15%">
+                        <img src="px.gif" alt="spacer" width="1">
+                      </td>
+                      <td align="right" width="55%" valign="bottom">
+                        <img src="banner_intro_design_trust.png" style="max-width:400px;" width="100%" >
+                      </td>
+                      <td width="15%" valign="bottom">
+                        <img src="banner_intro_design_trust_boom.png" class="magic-boom" style="margin-top:1em;" width="100%">
+                      </td>
+                      <td width="15%">
+                        <img src="px.gif" alt="spacer" width="1">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="42">
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </layout>    
     <layout label="spacer-8">
       <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="8">
         <tr>
