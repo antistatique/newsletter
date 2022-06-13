@@ -212,61 +212,17 @@ Bring inline: Yes. */
       animation-timing-function: linear;
     }
 
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
     
     .magic-hand{
       animation: godown 0.8s infinite;
       animation-direction: alternate;
     }
-    @keyframes godown {
-      from {
-        transform: translateY(0px);
-      }
 
-      to {
-        transform: translateY(15px);
-      }
-    }
     
     .magic-boom{
       animation: explode 6s infinite;
       animation-timing-function: cubic-bezier(0.96, 0.04, 0.29, 1.68);
       animation-delay: 3s;
-    }
-    @keyframes explode {
-      0% {
-        transform: scale(0);
-      }
-      4% {
-        transform: scale(1.6);
-        opacity: 1
-        transform: translateY(-4px);
-      }
-      4.3%{
-        transform: rotate(5deg);
-      }
-      4.6%{
-        transform: rotate(-5deg);
-      }
-      4.8%{
-        transform: rotate(5deg);
-      }
-      5% {
-        transform: scale(1);
-      }
-      100%{
-        transform: scale(0.8);
-        opacity: 0;
-        transform: translateY(10px);
-      }
     }
 
     .shine-star{
@@ -280,11 +236,6 @@ Bring inline: Yes. */
       animation: flicker 10s infinite;      
     }
     
-    @keyframes flicker { /* flame pulses */
-      0%   { opacity:1; }
-      50%  { opacity:0; }
-      100% { opacity:1; }
-    }
 
     .wave-sea{
       overflow: hidden;
@@ -299,35 +250,48 @@ Bring inline: Yes. */
       animation: wavingright 20s ease-in-out infinite; 
     }
 
-    @keyframes wavingfull { /* wave move */
-      0%  {
-        transform:translateX(-50%);
-      }
-      
-      100%{
-        transform:translateX(0%);
-      }
-    }
     
-    @keyframes wavingleft { /* wave move */
-      0%  {
-        transform:translateX(0);
+    .resizer{
+        border-width: 12px;
+        border-style: solid;
+        border-image: url('resizer.png');
+        border-color: #ff7495;
+        border-image-slice: 12;
+        border-image-repeat: round;
+        width: 20px;
+        height: 20px;
+        animation: scalingsquare 4.6s ease-in-out infinite; 
       }
-      
-      50%{
-        transform:translateX(50%);
-      }
-    }
-    
-    @keyframes wavingright { /* wave move */
-        0%  {
-          transform:translateX(0);
-        }
         
-        50%{
-          transform:translateX(-50%);
-        }
-    }
+      .switch{
+        background: url('banner_media_switch.png');
+        background-repeat: repeat-y;
+        width: 19px;
+        height: 50px;
+        display: inline-block;
+        animation: movingswitch 5s ease-in-out infinite; 
+      }
+      .switch-1{
+        margin-left: 20px;
+        animation-delay: 0.4s;
+      }
+      .pointing-arrow{
+        animation: pointing 1s ease-in-out infinite; 
+        animation-direction: alternate;
+      }
+      
+      .pointing-arrow-sw{
+        margin-bottom: 40px;
+        transform: rotate(140deg);
+      }
+      .pointing-arrow-ne{
+        margin-top: 40px;
+        transform: rotate(-30deg);
+      }
+      
+    
+      
+    
 
     @media only screen and (max-width: 600px) {
 
@@ -402,6 +366,134 @@ Bring inline: Yes. */
 
     }
   </style>
+  
+  <style>
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+    
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes godown {
+      from {
+        transform: translateY(0px);
+      }
+    
+      to {
+        transform: translateY(15px);
+      }
+    }
+    @keyframes explode {
+      0% {
+        transform: scale(0);
+      }
+      4% {
+        transform: scale(1.6);
+        opacity: 1
+        transform: translateY(-4px);
+      }
+      4.3%{
+        transform: rotate(5deg);
+      }
+      4.6%{
+        transform: rotate(-5deg);
+      }
+      4.8%{
+        transform: rotate(5deg);
+      }
+      5% {
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(0.8);
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+    @keyframes flicker { /* flame pulses */
+      0%   { opacity:1; }
+      50%  { opacity:0; }
+      100% { opacity:1; }
+    }
+    @keyframes wavingfull { /* wave move */
+      0%  {
+        transform:translateX(-50%);
+      }
+      
+      100%{
+        transform:translateX(0%);
+      }
+    }
+    
+    @keyframes wavingleft { /* wave move */
+      0%  {
+        transform:translateX(0);
+      }
+      
+      50%{
+        transform:translateX(50%);
+      }
+    }
+    
+    @keyframes wavingright { /* wave move */
+        0%  {
+          transform:translateX(0);
+        }
+        
+        50%{
+          transform:translateX(-50%);
+        }
+    }
+      @keyframes scalingsquare { /* square grow */
+          0%  {
+            width: 20px;
+            height: 20px;
+          }
+          23%{
+            width: 30px;
+            height: 30px;
+          }
+          43%{
+              width: 50px;
+              height: 30px;
+            }
+          61%{
+            width: 30px;
+            height: 30px;
+          }  
+          99%{
+            width: 20px;
+            height: 20px;
+          } 
+        }
+      @keyframes movingswitch {
+        0%{
+          background-position: 50% 0px;
+        }
+        50%{
+          background-position: 50% -20px;
+        }
+        60%{
+            background-position: 50% -5px;
+          }
+        99%{
+          background-position: 50% 0px;
+        }
+      }
+      @keyframes pointing { /* pointing arrow */
+          from {
+            transform: translateX(0px);
+          }
+          
+          to {
+            transform: translateX(15px);
+          }
+      }
+  </style>
+  
 </head>
 
 <body>
@@ -473,13 +565,91 @@ Bring inline: Yes. */
         </tr>
       </table>
     </layout>
+    <layout label="header-media">
+        <!-- HEADER -->
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#000032">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="background:url('wave_bg.png');background-repeat:no-repeat;background-size: 120%; background-position: center bottom;">
+                <tr>
+                  <td colspan="2" align="center">
+                    <img src="px.gif" alt="spacer" height="21">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="https://antistatique.net">
+                      <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
+                    </a>
+                  </td>
+                  <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                    <singleline label="date">Novembre 2021</singleline>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="center">
+                    <img src="px.gif" alt="spacer" height="42">
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="background-color:transparent!important;">
+                      <tr>
+                        <td rowspan="2" width="10%">
+                          <img src="px.gif" alt="spacer" width="10" height="10">
+                        </td>
+                        <td width="60%" align="right">
+                          <img src="banner_les_sites.png" alt="Les sites" style="max-width:100%;">
+                        </td>
+                        <td width="50">
+                          <div class="switch switch-1"></div>
+                          <div class="switch switch-2"></div>
+                        </td>
+                        <td rowspan="2" width="10%">
+                            <img src="px.gif" alt="spacer" width="10" height="10">
+                          </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <table cellpadding="0" cellspacing="0" border="0" align="center" class="full-table" style="background-color:transparent!important;">
+                            <tr>
+                                <td align="center">
+                                    <img src="px.gif" alt="spacer" height="42">
+                                </td>
+                                <td colspan="2" width="40%">
+                                  <img src="banner_les_sites_media.png" alt="Médias" style="max-width:100%;display:block;">
+                                </td>
+                            </tr>
+                            <tr height="60">
+                              <td width="20%" valign="top" align="right" >
+                                  <div class="resizer"></div>
+                                </td>
+                                <td align="center">
+                                      <img src="px.gif" alt="spacer" height="42">
+                                  </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" align="center">
+                    <img src="px.gif" alt="spacer" height="42">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
    
    <layout label="header-strategy">
      <!-- HEADER -->
      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
        <tr>
          <td>
-           <img src="banner_background.png" width="100%" style="max-width:100%; position:absolute; top:-100%" class="spin-pinky" />
            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
              <tr>
                <td colspan="2" align="center">
@@ -539,6 +709,75 @@ Bring inline: Yes. */
        </tr>
      </table>
    </layout>    
+   
+   <layout label="header-forme">
+      <!-- HEADER -->
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
+        <tr>
+          <td>
+            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="21">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://antistatique.net">
+                    <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
+                  </a>
+                </td>
+                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+                  <singleline label="date">Été 2022</singleline>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="42">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                    <tr>
+                      <td align="center" valign="bottom" colspan="2">
+                        <img src="banner_forme_1.png" style="max-width:100%;" alt="en pleine">
+                      </td>
+                      <td width="10%">
+                        <div class="pointing-arrow-sw">
+                          <img src="banner_forme_fleche.png" alt="" class="pointing-arrow"  style="max-width:100%;">
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td width="10%">
+                          <div class="pointing-arrow-ne">
+                            <img src="banner_forme_fleche.png" alt="" class="pointing-arrow"  style="max-width:100%;">
+                          </div>
+                        </td>
+                         <td align="center" valign="top" colspan="2">
+                           <img src="banner_forme_loop.gif"  style="max-width:100%;" alt="forme">
+                        </td>
+                     </tr>
+                      <tr>
+                        <td align="center" colspan="3">
+                          <img src="px.gif" alt="spacer" width="10" height="10">
+                        </td>
+                      </tr>
+                    </table>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center">
+                  <img src="px.gif" alt="spacer" height="42">
+                </td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+    </layout>    
     
     <layout label="header-summer">
       <!-- HEADER -->
@@ -766,7 +1005,7 @@ Bring inline: Yes. */
                 <td>
                   <multiline label="intro">
                     <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:28px;line-height:1.5em;color:#808098;">
-                      <span style="color:#000032;">Bonjour Noémie,</span> cette semaine, on vous parle de l’évolution de notre agence tant d’un point de vue structurel que visuel. Nous sommes ravis de te la faire découvrir !
+                      Bonjour Noémie, cette semaine, on vous parle de l’évolution de notre agence tant d’un point de vue structurel que visuel. Nous sommes ravis de te la faire découvrir !
                     </p>
                   </multiline>
                 </td>
