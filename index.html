@@ -1,649 +1,458 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Antistatique</title>
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="light">
   <style type="text/css">
-    /* Based on The MailChimp Reset INLINE: Yes. */
-    /* Client-specific Styles */
-    #outlook a {
-      padding: 0;
-    }
+	
+	/* Client-specific Styles */
+	#outlook a {
+	  padding: 0;
+	}
 
-    /* Force Outlook to provide a "view in browser" menu link. */
-    body {
-      width: 100% !important;
-      -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-      margin: 0;
-      padding: 0;
-      font: 1em/1.4em Helvetica, sans-serif;
-      color: #777777;
-    }
+	/* Force Outlook to provide a "view in browser" menu link. */
+	body {
+	  width: 100% !important;
+	  -webkit-text-size-adjust: 100%;
+	  -ms-text-size-adjust: 100%;
+	  margin: 0;
+	  padding: 0;
+	  font: 1em/1.4em Helvetica, sans-serif;
+	  color: #777777;
+	}
 
-    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
-    .ExternalClass {
-      width: 100%;
-    }
+	/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+	.ExternalClass {
+	  width: 100%;
+	}
 
-    /* Force Hotmail to display emails at full width */
-    .ExternalClass,
-    .ExternalClass p,
-    .ExternalClass span,
-    .ExternalClass font,
-    .ExternalClass td,
-    .ExternalClass div {
-      line-height: 100%;
-    }
+	/* Force Hotmail to display emails at full width */
+	.ExternalClass,
+	.ExternalClass p,
+	.ExternalClass span,
+	.ExternalClass font,
+	.ExternalClass td,
+	.ExternalClass div {
+	  line-height: 100%;
+	}
 
-    /* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
-    #backgroundTable {
-      margin: 0;
-      padding: 0;
-      width: 100% !important;
-      line-height: 100% !important;
-    }
+	/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+	#backgroundTable {
+	  margin: 0;
+	  padding: 0;
+	  width: 100% !important;
+	  line-height: 100% !important;
+	}
 
-    /* End reset */
-    /* Some sensible defaults for images
+	body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+	table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+	img { -ms-interpolation-mode: bicubic; }
+	
+	/* RESET STYLES */
+	img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+	table { border-collapse: collapse !important; }
+	
+	/* iOS BLUE LINKS */
+	a[x-apple-data-detectors] {
+		color: inherit !important;
+		text-decoration: none !important;
+		font-size: inherit !important;
+		font-family: inherit !important;
+		font-weight: inherit !important;
+		line-height: inherit !important;
+	}
+	
+	/* GMAIL BLUE LINKS */
+	u + #body a {
+		color: inherit;
+		text-decoration: none;
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+	
+	/* SAMSUNG MAIL BLUE LINKS */
+	#MessageViewBody a {
+		color: inherit;
+		text-decoration: none;
+		font-size: inherit;
+		font-family: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+	}
+
+
+	/* End reset */
+	/* Some sensible defaults for images 
 Bring inline: Yes. */
-    img {
-      outline: none;
-      text-decoration: none;
-      -ms-interpolation-mode: bicubic;
-    }
+	img {
+	  outline: none;
+	  text-decoration: none;
+	  -ms-interpolation-mode: bicubic;
+	}
 
-    a img {
-      border: none;
-    }
+	a img {
+	  border: none;
+	}
 
-    .image_fix {
-      display: block;
-    }
+	.image_fix {
+	  display: block;
+	}
 
-    /* Yahoo paragraph fix
+	/* Yahoo paragraph fix
 Bring inline: Yes. */
-    p {
-      margin: 0 0 1em 0;
-    }
+	p {
+	  margin: 0 0 1em 0;
+	}
 
-    /* Hotmail header color reset
+	/* Hotmail header color reset
 Bring inline: Yes. */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: black !important;
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+	  color: black !important;
+	}
 
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {
-      color: blue !important;
-    }
+	h1 a,
+	h2 a,
+	h3 a,
+	h4 a,
+	h5 a,
+	h6 a {
+	  color: blue !important;
+	}
 
-    h1 a:active,
-    h2 a:active,
-    h3 a:active,
-    h4 a:active,
-    h5 a:active,
-    h6 a:active {
-      color: red !important;
-      /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
-    }
+	h1 a:active,
+	h2 a:active,
+	h3 a:active,
+	h4 a:active,
+	h5 a:active,
+	h6 a:active {
+	  color: red !important;
+	  /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+	}
 
-    h1 a:visited,
-    h2 a:visited,
-    h3 a:visited,
-    h4 a:visited,
-    h5 a:visited,
-    h6 a:visited {
-      color: purple !important;
-      /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
-    }
+	h1 a:visited,
+	h2 a:visited,
+	h3 a:visited,
+	h4 a:visited,
+	h5 a:visited,
+	h6 a:visited {
+	  color: purple !important;
+	  /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+	}
 
-    /* Outlook 07, 10 Padding issue fix
+	/* Outlook 07, 10 Padding issue fix
 Bring inline: No.*/
-    table td {
-      border-collapse: collapse;
-    }
+	table td {
+	  border-collapse: collapse;
+	}
 
-    /* Remove spacing around Outlook 07, 10 tables
+	/* Remove spacing around Outlook 07, 10 tables
 Bring inline: Yes */
-    table {
-      border-collapse: collapse;
-      mso-table-lspace: 0pt;
-      mso-table-rspace: 0pt;
-    }
-
-    /* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
-Bring inline: Yes. */
+	table {
+	  border-collapse: collapse;
+	  mso-table-lspace: 0pt;
+	  mso-table-rspace: 0pt;
+	}
 
 
-    /* Antistatique specific
+
+	/* Antistatique specific
 
 #FF0099 Magenta
 #FFF618 Limonade
 #570039 Balsamique
 #FF7495 Flamant rose
+#FFEFF0 White rose
 #000032 Minuit
 #4D4D70 Sensei
-#808098 Ninja
+#000032 Ninja
 
  */
 
-    a {
-      color: #FF0099;
-    }
+	a {
+	  color: #000032;
+	}
 
 
-    .cta_link {
-      background-image: url("arrow.png");
-      background-repeat: no-repeat;
-      background-position: 100% 4px;
-      padding-right: 18px;
-      border-bottom: 1px solid #ff0099;
-      padding-bottom: 4px;
-      text-decoration: none;
-      transition: all 0.1s ease;
-      color: #FF0099;
-    }
+	.cta_link {
+	  border-bottom: 1px solid #FF00AA;
+	  padding-bottom: 1px;
+	  text-decoration: none;
+	  transition: all 0.1s ease;
+	  color: #FF00AA;
+	}
 
-    .cta_link:hover {
-      border-bottom-width: 2px;
-      background-position: 100% 0px;
-    }
+	.cta_link:hover {
+	  border-bottom: 1px solid #D1007E;
+	  color: #D1007E;
+	}
 
-    .cta_button {
-      text-decoration: none;
-      font-weight: normal;
-      border: 1px solid #ff0099;
-      padding: 1em 1.4em;
-      border-radius: 2em;
-      background-size: 200% 200%;
-      background-image:
-        linear-gradient(to top, #ff0099 50%, transparent 50%);
-      transition: background-position 500ms, color 500ms ease, border-color 500ms ease;
-    }
+	.cta_button {
+	  text-decoration: none;
+	  font-weight: normal;
+	  border: 1px solid #ff0099;
+	  padding: 0.6em 1.2em;
+	  margin: 0px;
+	  border-radius: 2em;
+	  background-size: 200% 200%;
+	  background-image:
+		linear-gradient(to top, #ff0099 50%, transparent 50%);
+	  transition: background-position 500ms, color 500ms ease, border-color 500ms ease;
+	}
 
-    .cta_button_full {
-      background-color: #ff0099;
-      color: #ffffff;
-    }
+	.cta_button_full {
+	  background-color: #ff0099;
+	  color: #ffffff;
+	}
 
-    .cta_button:hover {
-      color: #ffffff !important;
-      background-image:
-        linear-gradient(to top, #ff0099 51%, transparent 50%);
-      background-position: 0 100%;
-      transition: background-position 500ms, color 500ms ease, border-color 500ms ease;
-    }
+	.cta_button:hover {
+	  color: #ffffff !important;
+	  background-image:
+		linear-gradient(to top, #ff0099 51%, transparent 50%);
+	  background-position: 0 100%;
+	  transition: background-position 500ms, color 500ms ease, border-color 500ms ease;
+	}
 
-    .cta_button_full:hover {
-      color: #FFFFFF !important;
-      background-image:
-      linear-gradient(to top, #D1007E 51%, transparent 50%);
-      border: 1px solid #D1007E;
-    }
+	.cta_button_full:hover {
+	  color: #FFFFFF !important;
+	  background-image:
+	  linear-gradient(to top, #D1007E 51%, transparent 50%);
+	  border: 1px solid #D1007E;
+	}
 
-    .spin-pinky{
-      animation-name: spin;
-      animation-duration: 40s;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
-    .pinky-strategy{
-      
-      
-    }
+	  
+	
 
-    .roll-star {
-      animation-name: spin;
-      animation-duration: 8000ms;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-    }
+	@media only screen and (max-width: 600px) {
 
-    
-    .magic-hand{
-      animation: godown 0.8s infinite;
-      animation-direction: alternate;
-    }
+	  /* Part one of controlling phone number linking for mobile. */
+	  a[href^="tel"],
+	  a[href^="sms"] {
+		text-decoration: default;
+		pointer-events: auto;
+		cursor: default;
+	  }
 
-    
-    .magic-boom{
-      animation: explode 6s infinite;
-      animation-timing-function: cubic-bezier(0.96, 0.04, 0.29, 1.68);
-      animation-delay: 3s;
-    }
+	  img.full-image {
+		width: 100%;
+		height: auto;
+	  }
 
-    .shine-star{
-      opacity:1;  
-      animation: flicker 5s infinite;      
-    }    
-    .shine-star-2{
-      animation: flicker 7s infinite;      
-    }
-    .shine-star-3{
-      animation: flicker 10s infinite;      
-    }
-    .shine-star-4{
-      animation: flicker 13s infinite;      
-    }
-    .shine-star-5{
-      animation: flicker 11s infinite;      
-    }        
-    
+	  table.full-table {
+		width: 95% !important;
+		margin: 0 auto;
+		float: none;
+	  }
 
-    .wave-sea{
-      overflow: hidden;
-    }
-    .wave-full{
-      animation: wavingfull 20s linear infinite; 
-    }
-    .wave-left{
-      animation: wavingleft 20s ease-in-out infinite; 
-    }
-    .wave-right{
-      animation: wavingright 20s ease-in-out infinite; 
-    }
-
-    
-    .resizer{
-        border-width: 12px;
-        border-style: solid;
-        border-image: url('resizer.png');
-        border-color: #ff7495;
-        border-image-slice: 12;
-        border-image-repeat: round;
-        width: 20px;
-        height: 20px;
-        animation: scalingsquare 4.6s ease-in-out infinite; 
-      }
-        
-      .switch{
-        background: url('banner_media_switch.png');
-        background-repeat: repeat-y;
-        width: 19px;
-        height: 50px;
-        display: inline-block;
-        animation: movingswitch 5s ease-in-out infinite; 
-      }
-      .switch-1{
-        margin-left: 20px;
-        animation-delay: 0.4s;
-      }
-      .pointing-arrow{
-        animation: pointing 1s ease-in-out infinite; 
-        animation-direction: alternate;
-      }
-      
-      .pointing-arrow-sw{
-        margin-bottom: 40px;
-        transform: rotate(140deg);
-      }
-      .pointing-arrow-ne{
-        margin-top: 40px;
-        transform: rotate(-30deg);
-      }
-      
-    
-      
-    
-
-    @media only screen and (max-width: 600px) {
-
-      /* Part one of controlling phone number linking for mobile. */
-      a[href^="tel"],
-      a[href^="sms"] {
-        text-decoration: default;
-        pointer-events: auto;
-        cursor: default;
-      }
-
-      img.full-image {
-        width: 100%;
-        height: auto;
-      }
-
-      table.full-table {
-        width: 95% !important;
-        margin: 0 auto;
-        float: none;
-      }
-
-      table.full-table table.full-table {
-        width: 100% !important;
-        margin: 0 auto;
-        float: none;
-      }
+	  table.full-table table.full-table {
+		width: 100% !important;
+		margin: 0 auto;
+		float: none;
+	  }
 
 
-      .number-title {
-        display: block !important;
-        font-size: 54px !important;
-      }
-    }
+	  
+	  *.title_32{
+		font-size:22px!important;
+		line-height: 26px!important;
+	  }
+	  *.title_22{
+		font-size:22px!important;
+		line-height: 26px!important;
+	  }
+	  *.text_20{
+		font-size:20px!important;
+	  }
+	  *.text_16{
+		font-size:16px!important;
+	  }
+	  
+	}
 
-    @media (prefers-color-scheme: dark) {
-
-      table {
-        background-color: #000032 !important;
-      }
-      
-      table.balsamic, table.balsamic table, table.flament-rose, table.flament-rose table  {
-        background-color: #570039 !important;
-      }
-      table.pinky-strategy{
-        background-color: #FF0099 !important;
-      }
-      table.pinky-strategy table{
-        background-color: transparent !important;
-      }
-
-      .hr-table {
-        background-color: #ff0099 !important;
-      }
-
-      h1,
-      h2,
-      p,
-      span,
-      a,
-      b,
-      td {
-        color: #ffffff !important;
-      }
-
-      .number-title {
-        color: #ff0099 !important;
-      }
-
-      .invisible_text {
-        color: #000032 !important;
-      }
-
-    }
-  </style>
-  
-  <style>
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-    
-      to {
-        transform: rotate(360deg);
-      }
-    }
-    @keyframes godown {
-      from {
-        transform: translateY(0px);
-      }
-    
-      to {
-        transform: translateY(15px);
-      }
-    }
-    @keyframes explode {
-      0% {
-        transform: scale(0);
-      }
-      4% {
-        transform: scale(1.6);
-        opacity: 1
-        transform: translateY(-4px);
-      }
-      4.3%{
-        transform: rotate(5deg);
-      }
-      4.6%{
-        transform: rotate(-5deg);
-      }
-      4.8%{
-        transform: rotate(5deg);
-      }
-      5% {
-        transform: scale(1);
-      }
-      100%{
-        transform: scale(0.8);
-        opacity: 1;
-        transform: translateY(-8px);
-      }
-    }
-    @keyframes flicker { /* flame pulses */
-      0%   { opacity:1; }
-      50%  { opacity:0; }
-      100% { opacity:1; }
-    }
-    @keyframes wavingfull { /* wave move */
-      0%  {
-        transform:translateX(-50%);
-      }
-      
-      100%{
-        transform:translateX(0%);
-      }
-    }
-    
-    @keyframes wavingleft { /* wave move */
-      0%  {
-        transform:translateX(0);
-      }
-      
-      50%{
-        transform:translateX(50%);
-      }
-    }
-    
-    @keyframes wavingright { /* wave move */
-        0%  {
-          transform:translateX(0);
-        }
-        
-        50%{
-          transform:translateX(-50%);
-        }
-    }
-      @keyframes scalingsquare { /* square grow */
-          0%  {
-            width: 20px;
-            height: 20px;
-          }
-          23%{
-            width: 30px;
-            height: 30px;
-          }
-          43%{
-              width: 50px;
-              height: 30px;
-            }
-          61%{
-            width: 30px;
-            height: 30px;
-          }  
-          99%{
-            width: 20px;
-            height: 20px;
-          } 
-        }
-      @keyframes movingswitch {
-        0%{
-          background-position: 50% 0px;
-        }
-        50%{
-          background-position: 50% -20px;
-        }
-        60%{
-            background-position: 50% -5px;
-          }
-        99%{
-          background-position: 50% 0px;
-        }
-      }
-      @keyframes pointing { /* pointing arrow */
-          from {
-            transform: translateX(0px);
-          }
-          
-          to {
-            transform: translateX(15px);
-          }
-      }
+	
   </style>
   
 </head>
 
-<body>
-  
+ <body style="margin: 0 !important; padding: 0 !important;">
 
-  <repeater>
-    <layout label="header">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#000032">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Janvier 2021</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td width="5%">
-                        <img src="px.gif" alt="spacer" width="1">
-                      </td>
-                      <td valign="bottom" align="left" width="10%">
-                        <img src="title_union.png" class="roll-star" style="max-width:70px" width="100%">
-                      </td>
-                      <td align="center" width="50%">
-                        <img src="title_agence_evolue.png" style="max-width:300px;" width="100%">
-                      </td>
-                      <td width="3%">
-                        <img src="title_confetti.png" class="shine-star" style="max-width: 25px;" width="100%">
-                      </td>
-                      <td width="3%">
-                        <img src="title_confetti.png" class="shine-star shine-star-2" style="margin-bottom:4em;max-width: 25px;" width="100%">
-                      </td>
-                      <td width="3%">
-                        <img src="title_confetti.png" class="shine-star shine-star-3" style="margin-top:1em;max-width: 25px;" width="100%">
-                      </td>
-                      <td width="5%">
-                        <img src="px.gif" alt="spacer" width="1">
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-    <layout label="header-media">
-        <!-- HEADER -->
-        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#000032">
+	<!-- This ghost table is used to constrain the width in Outlook. The role attribute is set to presentation to prevent it from being read by screenreaders. -->
+ <!--[if (gte mso 9)|(IE)]>
+ <table cellspacing="0" cellpadding="0" border="0" width="600" align="center" role="presentation"><tr><td>
+ <![endif]-->  
+ 
+ <!-- HEADER -->
+   <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	 <tr>
+	   <td bgcolor="#FFEFF0" height="60" colspan="3"><img src="px.gif" alt="spacer" height="60"></td>
+	 </tr>
+	 <tr>
+	   <td bgcolor="#FFEFF0" height="180"><img src="px.gif" alt="spacer" height="8"></td>
+	   <td bgcolor="#FFFFFF" rowspan="2" width="600">
+		 
+		   <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="">
+			 <tr>
+			   <td bgcolor="#FFEFF0" colspan="5" style="line-height:1px;font-size:1px;" valign="bottom">
+				 <a href="https://antistatique.net"  style="line-height:1px;font-size:1px;">
+				   <img src="2025_header_top.png" alt="Antistatique - notre logo en magenta" width="100%" class="full-image" />
+				 </a>
+			   </td>
+			 </tr>
+			 <tr>
+			   <td bgcolor="#FF0099" rowspan="2" style="line-height:1px;font-size:1px;">
+				 <img src="px.gif" alt="spacer" width="4">
+			   </td>
+			   <td rowspan="2" style="line-height:1px;font-size:1px;">
+				 <img src="px.gif" alt="spacer" width="20">
+			   </td>
+			   <td align="center" style="line-height:1px;font-size:1px;" height="20" width="100%">
+				 <img src="px.gif" alt="spacer" height="20">
+			   </td>
+			   <td rowspan="2" style="line-height:1px;font-size:1px;">
+				 <img src="px.gif" alt="spacer" width="20">
+			   </td>
+			   <td bgcolor="#FF0099" rowspan="2" style="line-height:1px;font-size:1px;">
+				 <img src="px.gif" alt="spacer" width="4">
+			   </td>
+			 </tr>
+			 <tr>
+			   <td>
+				 <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight: 400;color:#000032;line-height: 28px;" class="text_18">
+						   <singleline label="header_bonjour">            
+							 Hello !
+						   </singleline>
+						 </span><br/>
+				 <span style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height: 36px;font-weight: 500;color:#000032;" class="title_32">
+				   <singleline label="header_texte">            
+		 Cette semaine, on vous parle de <span style="color:#ff00aa;">➊</span> sites low tech, <span style="color:#ff00aa;">➋</span> de SEO, <span style="color:#ff00aa;">➌</span> et du traitement de la campagne américaine dans les médias digitaux.
+				   </singleline>
+				 </span>
+			   </td>
+			 </tr>
+			 <tr>
+			   <td colspan="2" rowspan="2" width="24" height="24" style="line-height:1px;font-size:1px;">
+				   <img src="2025_header_bottom_left.png" alt="border" width="24" height="24" style="display: block;"/>
+				</td>
+				 <td style="line-height:1px;font-size:1px;">
+				   <img src="px.gif" alt="spacer" width="20">
+				 </td>
+			   <td colspan="2" rowspan="2" width="24" height="24" style="line-height:1px;font-size:1px;">
+				   <img src="2025_header_bottom_right.png" alt="border" width="24" height="24" style="display: block;"/>
+				</td>
+			 </tr>
+			 <tr>
+			   <td  bgcolor="#FF0099" style="line-height:1px;font-size:1px;" height="4">
+				 <img src="px.gif" alt="spacer" width="4" height="4">
+			   </td>
+			 </tr>
+		   </table>
+		 
+	   </td>
+	   <td bgcolor="#FFEFF0" ><img src="px.gif" alt="spacer" height="8"></td>
+	 </tr>
+	 <tr height="36">
+	   <td bgcolor="#FFFFFF" height="36"><img src="px.gif" alt="spacer" height="8"></td>
+	   <td bgcolor="#FFFFFF" height="36"><img src="px.gif" alt="spacer" height="8"></td>
+	 </tr>
+   </table>    
+ 
+				<!-- @@@ ALL CONTENT @@@ -->
+
+
+
+<!-- @@@ LAYOUT @@@ -->
+<repeater>
+    
+     
+      <layout label="spacer-8">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="8">
+          <tr>
+            <td height="8" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="8">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="spacer-16">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="16">
+          <tr>
+            <td height="16" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="16">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="spacer-32">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="32">
+          <tr>
+            <td height="32" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="32">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="spacer-64">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="64">
+          <tr>
+            <td height="64" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="64">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+    
+      <layout label="hr">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#E1E1E1" height="1" class="hr-table">
+          <tr>
+            <td height="1" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="1">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="intro-text">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
           <tr>
             <td>
-              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="background:url('wave_bg.png');background-repeat:no-repeat;background-size: 120%; background-position: center bottom;">
-                <tr>
-                  <td colspan="2" align="center">
-                    <img src="px.gif" alt="spacer" height="21">
-                  </td>
-                </tr>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
                 <tr>
                   <td>
-                    <a href="https://antistatique.net">
-                      <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
-                    </a>
-                  </td>
-                  <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                    <singleline label="date">Novembre 2021</singleline>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" align="center">
-                    <img src="px.gif" alt="spacer" height="42">
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2">
-                    <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="background-color:transparent!important;">
-                      <tr>
-                        <td rowspan="2" width="10%">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>
-                        <td width="60%" align="right">
-                          <img src="banner_les_sites.png" alt="Les sites" style="max-width:100%;">
-                        </td>
-                        <td width="50">
-                          <div class="switch switch-1"></div>
-                          <div class="switch switch-2"></div>
-                        </td>
-                        <td rowspan="2" width="10%">
-                            <img src="px.gif" alt="spacer" width="10" height="10">
-                          </td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">
-                          <table cellpadding="0" cellspacing="0" border="0" align="center" class="full-table" style="background-color:transparent!important;">
-                            <tr>
-                                <td align="center">
-                                    <img src="px.gif" alt="spacer" height="42">
-                                </td>
-                                <td colspan="2" width="40%">
-                                  <img src="banner_les_sites_media.png" alt="Médias" style="max-width:100%;display:block;">
-                                </td>
-                            </tr>
-                            <tr height="60">
-                              <td width="20%" valign="top" align="right" >
-                                  <div class="resizer"></div>
-                                </td>
-                                <td align="center">
-                                      <img src="px.gif" alt="spacer" height="42">
-                                  </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" align="center">
-                    <img src="px.gif" alt="spacer" height="42">
+                    <multiline label="intro">
+                      <p style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032;" class="title_22">
+                        Bonjour Noémie, cette semaine, on vous parle de l’évolution de notre agence tant d’un point de vue structurel que visuel. Nous sommes ravis de te la faire découvrir !
+                      </p>
+                    </multiline>
                   </td>
                 </tr>
               </table>
@@ -651,1406 +460,1220 @@ Bring inline: Yes. */
           </tr>
         </table>
       </layout>
-   
-  <layout label="header-http">
-        <!-- HEADER -->
-        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#000032">
+    
+      <layout label="title-numbered">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
           <tr>
             <td>
               <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
                 <tr>
-                  <td colspan="2" align="center">
-                    <img src="px.gif" alt="spacer" height="21">
+                  <td height="24" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="40">
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <a href="https://antistatique.net">
-                      <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
-                    </a>
-                  </td>
-                  <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                    <singleline label="date">Février 2023</singleline>
+                    <span style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height:112%;font-weight: 500;color:#FF00AA;" class="title_32">
+                      <singleline label="title">Point of view</singleline>
+                    </span>
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="2" align="center">
-                    <img src="px.gif" alt="spacer" height="24">
+                  <td>
+                    <span style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height:112%;font-weight: 500;color:#000032;" class="title_32">
+                      <singleline label="title">Refonte web, comment se positionner</singleline>
+                    </span>
                   </td>
                 </tr>
                 <tr>
-                  <td colspan="2">
-                    <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="background-color:transparent!important;">
-                      <tr>
-                        <td width="15%">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>
-                        <td align="center">
-                            <a href="https://antistatique.net">
-                              <img src="banner_globe.png" alt="Spining globe with https://www...." style="max-width:100%;display:block;">
-                            </a>
-                        </td>    
-                        <td width="15%">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>                                            
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" align="center">
-                    <img src="px.gif" alt="spacer" height="36">
+                  <td height="24" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="24">
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
         </table>
-      </layout>   
-   
-   
-   <layout label="header-associes">
-     <!-- HEADER -->
-     <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
-       <tr>
-         <td>
-           <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
-             <tr>
-               <td colspan="2" align="center">
-                 <img src="px.gif" alt="spacer" height="21">
-               </td>
-             </tr>
-             <tr>
-               <td>
-                 <a href="https://antistatique.net">
-                   <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
-                 </a>
-               </td>
-               <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                 <singleline label="date">Printemps 2023</singleline>
-               </td>
-             </tr>
-             <tr>
-               <td colspan="2" align="center">
-                 <img src="px.gif" alt="spacer" height="42">
-               </td>
-             </tr>
-             <tr>
-               <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                   <tr>
-                     <td width="3%">
-                       <img src="px.gif" alt="spacer" width="1">
-                     </td>
-                    <td width="3%">
-                        <img src="title_confetti.png" class="shine-star-2" style="margin-top:0em;max-width: 25px;" width="100%">
-                      </td>
-                      <td width="3%" valign="bottom">
-                        <img src="title_confetti.png" class="shine-star shine-star-3" style="max-width: 25px;" width="100%">
-                      </td>
-                      <td width="3%" valign="top">
-                        <img src="title_confetti.png" class="shine-star" style="margin-top:0em;max-width: 25px;" width="100%">
-                      </td>                     
-                     <td align="center" width="50%">
-                       <img src="banner_associes.png" style="max-width:300px;" width="100%">
-                     </td>
-                     <td width="3%" valign="top">
-                       <img src="title_confetti.png" class="shine-star shine-star-5" style="max-width: 25px;" width="100%">
-                     </td>
-                     <td width="3%" valign="bottom">
-                       <img src="title_confetti.png" class="shine-star shine-star-4" style="margin-bottom:5px;max-width: 25px;" width="100%">
-                     </td>
-                     <td width="3%">
-                       <img src="px.gif" alt="spacer" width="1">
-                     </td>
-                   </tr>
-                 </table>                 
-               </td>
-             </tr>
-             <tr>
-               <td colspan="2" align="center">
-                 <img src="px.gif" alt="spacer" height="42">
-               </td>
-             </tr>
-           </table>
-           
-         </td>
-       </tr>
-     </table>
-   </layout>    
-
-<layout label="header-15-ans">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Hiver 2023</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                   <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                     <tr>
-                       <td align="right">
-                         <div style="margin-right:5px;">
-                           <img src="banner_globe_pastille_totale.png" style="max-width:100%; transform: rotate(15deg)" alt="Depuis 2008" class="roll-star">
-                         </div>
-                       </td>
-                        <td rowspan="2" valign="bottom">
-                          <img src="banner_globe_man.png" style="max-width:100%;" alt="">
-                        </td>
-                     </tr>
-                    <tr>
-                        <td>
-                          <img src="banner_globe_text.png" style="max-width:100%;" alt="Nous vous aidons à faire les bons choix numériques">
-                        </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-            
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-<layout label="header-campagne">
-     <!-- HEADER -->
-     <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
-       <tr>
-         <td>
-           <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
-             <tr>
-               <td colspan="2" align="center">
-                 <img src="px.gif" alt="spacer" height="21">
-               </td>
-             </tr>
-             <tr>
-               <td>
-                 <a href="https://antistatique.net">
-                   <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
-                 </a>
-               </td>
-               <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                 <singleline label="date">Juillet 2023</singleline>
-               </td>
-             </tr>
-             <tr>
-               <td colspan="2" align="center">
-                 <img src="px.gif" alt="spacer" height="42">
-               </td>
-             </tr>
-             <tr>
-               <td colspan="2">
-                 <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                  <tr>
-                    <td colspan="3">
-                      <img src="px.gif" alt="spacer" width="10" height="10">
-                    </td>
-                  </tr>
-                   <tr>
-                      <td align="left" width="15%" valign="bottom">
-                        <img src="banner_campagne_07.png"  style="max-width:100%;">
-                     </td>
-                     <td align="center" width="70%" valign="bottom">
-                       <img src="banner_campagne_kron.png"  style="max-width:100%;" class="magic-boom">
-                     </td>
-                      <td align="right" width="15%" valign="bottom">
-                         <img src="banner_campagne_23.png"  style="max-width:100%;">
-                      </td>                    </tr>
-                     <tr>
-                       <td colspan="3">
-                         <img src="px.gif" alt="spacer" width="10" height="10">
-                       </td>
-                     </tr>
-                   </table>
-               </td>
-             </tr>
-             <tr>
-               <td colspan="2" align="center">
-                 <img src="px.gif" alt="spacer" height="42">
-               </td>
-             </tr>
-           </table>
-           
-         </td>
-       </tr>
-     </table>
-   </layout>   
-<layout label="header-strategy">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Automne 2021</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td align="center" colspan="3">
-                        <img src="banner_strategies.png" style="max-width:100%;">
-                      </td>
-                    </tr>
-                    <tr>
-                       <td align="right" width="30%">
-                         <img src="banner_f.png"  style="max-width:100%;">
-                      </td>
-                      <td width="10%" valign="bottom">
-                        <img src="banner_spinner.png"  style="max-width:100%;" class="roll-star">
-                      </td>
-                      <td>
-                        <img src="banner_rtes.png" style="max-width:100%;">
-                      </td>
-                     </tr>
-                      <tr>
-                        <td colspan="2" align="center">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>
-                      </tr>
-                    </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-            
-          </td>
-        </tr>
-      </table>
-    </layout>       
-   
-   <layout label="header-forme">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Été 2022</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td align="center" valign="bottom" colspan="2">
-                        <img src="banner_forme_1.png" style="max-width:100%;" alt="en pleine">
-                      </td>
-                      <td width="10%">
-                        <div class="pointing-arrow-sw">
-                          <img src="banner_forme_fleche.png" alt="" class="pointing-arrow"  style="max-width:100%;">
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                        <td width="10%">
-                          <div class="pointing-arrow-ne">
-                            <img src="banner_forme_fleche.png" alt="" class="pointing-arrow"  style="max-width:100%;">
-                          </div>
-                        </td>
-                         <td align="center" valign="top" colspan="2">
-                           <img src="banner_forme_loop.gif"  style="max-width:100%;" alt="forme">
-                        </td>
-                     </tr>
-                      <tr>
-                        <td align="center" colspan="3">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>
-                      </tr>
-                    </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-            
-          </td>
-        </tr>
-      </table>
-    </layout>    
+      </layout>
     
-    <layout label="header-sig">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Août 2022</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td width="5%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                      <td align="right" valign="bottom" width="40">
-                        <img src="banner_sig_1_1.png" style="max-width:100%;" alt="v">
-                      </td>
-                      <td align="center" valign="bottom" width="40">
-                        <img src="banner_sig_o.png" style="max-width:100%;" alt="o" class="roll-star">
-                      </td>
-                      <td align="left" valign="bottom">
-                        <img src="banner_sig_1_2.png" style="max-width:100%;" alt="us êtes">
-                      </td>
-                      <td width="20%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                    </tr>
-                    <tr>
-                         <td align="center" valign="top" colspan="5">
-                           <img src="banner_sig_2.png"  style="max-width:100%;" alt="Bien ici">
-                        </td>
-                     </tr>
-                      <tr>
-                        <td align="center" colspan="5">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>
-                      </tr>
-                    </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-            
-          </td>
-        </tr>
-      </table>
-    </layout>       
-    <layout label="header-api">
-      <!-- HEADER API -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy" style="position:relative;overflow:hidden;">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table" style="position:relative; z-index:4" >
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en blanc" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Décembre 2022</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td width="12%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                      <td align="right" valign="bottom" width="50%">
-                        <img src="banner_api_app.png" style="max-width:100%;" alt="Applications">
-                      </td>
-                      <td width="5%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                      <td align="left" valign="bottom">
-                        <img src="banner_api_z.png" style="max-width:100%;" alt="">
-                      </td>
-                      <td width="5%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>                      
-                    </tr>
-                    </table>
-                    <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td width="5%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                      <td align="left" valign="top" width="12%">
-                        <img src="banner_api_dot.png" style="max-width:100%;" alt="Applications">
-                      </td>
-                      <td width="5%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                      <td align="right" valign="bottom" width="30%">
-                        <img src="banner_api_api.png" style="max-width:100%;" alt="">
-                      </td>
-                      <td width="15%">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>   
-
-                     </tr>
-                      <tr>
-                        <td align="center" colspan="5">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>
-                      </tr>
-                    </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-            
-          </td>
-        </tr>
-      </table>
-    </layout>           
     
-    <layout label="header-summer">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF7495" class="flament-rose">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Été 2021</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td align="left">
-                        <img src="banner_tres_bel_ete_a_tous_toutes.png" style="max-width:100%;">
-                      </td>
-                      <td valign="top">
-                        <img src="title_union.png" class="roll-star" style="max-width:100px;margin-top:50%;" width="100%">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" align="center">
-                        <img src="px.gif" alt="spacer" width="20" height="20">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" class="wave-sea">
-                        <table cellpadding="0" cellspacing="0" border="0" width="200%" class="wave wave-full">
-                          <tr>
-                            <td>
-                              <img src="banner_wave.png" width="100%"/>
-                            </td>
-                            <td>
-                              <img src="banner_wave.png" width="100%"/>
-                            </td>
-                          </tr>
-                        </table>
-                        <!-- <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td class="wave-sea">
-                              <img src="banner_wave_left.png" class="wave wave-left" width="100%"/>
-                            </td>
-                            <td class="wave-sea">
-                              <img src="banner_wave_right.png" class="wave wave-right" width="100%"/>
-                            </td>
-                          </tr>
-                        </table> -->
-                      </td>
-                     </tr>
-                      <tr>
-                        <td colspan="2" align="center">
-                          <img src="px.gif" alt="spacer" width="10" height="10">
-                        </td>
-                      </tr>
-                    </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>    
-    
-    <layout label="header-privacy-data">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#FF0099" class="pinky-strategy"
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                   <a href="https://antistatique.net">
-                      <img src="logo_antistatique_white.png" alt="Antistatique - notre logo en magenta" />
+      <layout label="category_reading-time">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                  <singleline label="article_1_category-link"><a href="https://antistatique.net" style="text-decoration: none;color:#FF00AA;">Portfolio</a></singleline>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      <layout label="title">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height:112%;font-weight: 500;color:#000032;" class="title_32">
+                    <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
+                      <singleline label="title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
                     </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Septembre 2023</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td colspan="3" align="center">
-                        <img src="banner_intro_design_trust_hand.png" class="magic-hand" style="margin-right: 10%;">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="3" align="center">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td width="15%">
-                        <img src="px.gif" alt="spacer" width="1">
-                      </td>
-                      <td align="center" width="70%" valign="bottom">
-                        <img src="banner_intro_privacy.png" style="max-width:500px;" width="100%" >
-                      </td>
-                      <td width="15%">
-                        <img src="px.gif" alt="spacer" width="1">
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>    
+                  </td>
+                </tr>
+                <tr>
+                  <td height="12" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="12">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      <layout label="image">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td>
+                    <img src="2025_banner_tiphaine.png" alt="..." editable="true" label="image" width="600" class="full-image" style="height:auto;border-radius: 8px;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
     
-    <layout label="header-balsamic">
-      <!-- HEADER -->
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#570039" class="balsamic">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+      <layout label="paragraphe_content">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td height="4" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="4">
+                  </td>
+                </tr>
+                <tr>
+                  <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                    <multiline label="paragraphe">
+                      <p  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                        Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
+                      </p>
+                    </multiline>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="4" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="4">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="cta_link">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                    <a href="https://antistatique.net" class="cta_link text_20">
+                      <singleline label="link">Ths is a link CTA label</singleline>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="two_column_elements">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td>
+    
+                    <table cellpadding="0" cellspacing="0" border="0" width="290" align="left" class="full-table">
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="2025_banner_tiphaine.png" alt="..." editable="true" label="article_1_image" width="290" height="auto" class="full-image" style="height:auto;border-radius: 8px;">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                          <singleline label="article_1_category-link"><a href="https://antistatique.net" style="text-decoration: none;color:#FF00AA;">Portfolio</a></singleline>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="2" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="2">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032;" class="title_22">
+                          <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
+                            <singleline label="article_1_title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                          <multiline label="article_1_paragraphe">
+                            <p  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                              Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
+                            </p>
+                          </multiline>
+                        </td>
+                      </tr>
+    
+                      <tr>
+                        <td height="4" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="4">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;" class="text_16">
+                          <a href="https://antistatique.net" class="cta_link text_16" style="color:#FF00AA;">
+                            <singleline label="article_1_link">Ths is a link CTA label 2</singleline>
+                          </a>
+                        </td>
+                      </tr>
+    
+                      <tr>
+                        <td height="32" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="32">
+                        </td>
+                      </tr>
+    
+                    </table>
+    
+    
+                    <table cellpadding="0" cellspacing="0" border="0" width="290" align="right" class="full-table">
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="2025_banner_tiphaine.png" alt="..." editable="true" label="article_2_image" width="290" height="auto" class="full-image" style="height:auto;border-radius: 8px;">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                       <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                        <singleline label="article_2_category-link"><a href="https://antistatique.net" style="text-decoration: none;color:#FF00AA;">Portfolio</a></singleline>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td height="2" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="2">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032;" class="title_22">
+                          <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
+                            <singleline label="article_2_title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                          <multiline label="article_2_paragraphe">
+                            <p  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                              Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
+                            </p>
+                          </multiline>
+                        </td>
+                      </tr>
+    
+                      <tr>
+                        <td height="4" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="4">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;" class="text_16">
+                          <a href="https://antistatique.net" class="cta_link text_16" style="color:#FF00AA;">
+                            <singleline label="article_2_link">Ths is a link CTA label</singleline>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="32" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="32">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      
+    
+      <layout label="big_cta">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr height="32">
+                  <td style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="spacer" height="32">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <a href="https://antistatique.net" class="cta_button cta_button_full text_20" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height: 140%;font-weight: 400;color:#FFFFFF;">
+                      <singleline label="cta_right">Partager la newsletter</singleline>
+                    </a>
+                  </td>
+                </tr>
+                <tr height="32">
+                  <td style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="spacer" height="32">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      
+      <layout label="quote">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
               <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="21">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://antistatique.net">
-                    <img src="logo_antistatique.png" alt="Antistatique - notre logo en magenta" />
-                  </a>
-                </td>
-                <td align="right" style="color:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-                  <singleline label="date">Janvier 2021</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-                    <tr>
-                      <td colspan="4" align="center">
-                        <img src="banner_intro_design_trust_hand.png" class="magic-hand" style="margin-right: 10%;">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="4" align="center">
-                        <img src="px.gif" alt="spacer" width="10" height="10">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td width="15%">
-                        <img src="px.gif" alt="spacer" width="1">
-                      </td>
-                      <td align="right" width="55%" valign="bottom">
-                        <img src="banner_intro_design_trust.png" style="max-width:400px;" width="100%" >
-                      </td>
-                      <td width="15%" valign="bottom">
-                        <img src="banner_intro_design_trust_boom.png" class="magic-boom" style="margin-top:1em;" width="100%">
-                      </td>
-                      <td width="15%">
-                        <img src="px.gif" alt="spacer" width="1">
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" align="center">
-                  <img src="px.gif" alt="spacer" height="42">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>    
-    <layout label="spacer-8">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="8">
-        <tr>
-          <td height="8" style="line-height:1px;font-size:1px;">
-            <img src="px.gif" alt="spacer" height="8">
-            <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
-              <singleline label="blank-text">Antistatique</singleline>
-            </span>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="spacer-16">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="16">
-        <tr>
-          <td height="16" style="line-height:1px;font-size:1px;">
-            <img src="px.gif" alt="spacer" height="16">
-            <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
-              <singleline label="blank-text">Antistatique</singleline>
-            </span>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="spacer-32">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="32">
-        <tr>
-          <td height="32" style="line-height:1px;font-size:1px;">
-            <img src="px.gif" alt="spacer" height="32">
-            <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
-              <singleline label="blank-text">Antistatique</singleline>
-            </span>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="spacer-64">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="64">
-        <tr>
-          <td height="64" style="line-height:1px;font-size:1px;">
-            <img src="px.gif" alt="spacer" height="64">
-            <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
-              <singleline label="blank-text">Antistatique</singleline>
-            </span>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-
-    <layout label="hr">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#E1E1E1" height="1" class="hr-table">
-        <tr>
-          <td height="1" style="line-height:1px;font-size:1px;">
-            <img src="px.gif" alt="spacer" height="1">
-            <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
-              <singleline label="blank-text">Antistatique</singleline>
-            </span>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="intro-text">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td>
-                  <multiline label="intro">
-                    <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:28px;line-height:1.5em;color:#808098;">
-                      Bonjour Noémie, cette semaine, on vous parle de l’évolution de notre agence tant d’un point de vue structurel que visuel. Nous sommes ravis de te la faire découvrir !
-                    </p>
-                  </multiline>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="title-numbered">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td height="40" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="40">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:72px;font-weight: 700;color:#FF0099;display:inline-block;margin-bottom:30px;padding-right:0.1em;" class="number-title">
-                    <singleline label="number">01</singleline>
-                  </span>
-                  <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;font-weight: 700;color:#000032;">
-                    <singleline label="title">Dernières nouveautés</singleline>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td height="24" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="24">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="image">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td>
-                  <img src="image.png" alt="..." editable="true" label="image" width="600" class="full-image" style="height:auto;">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="category_reading-time">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td height="8" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="8">
-                </td>
-              </tr>
-              <tr>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight: 400;color:#808098;">
-                  <singleline label="category-link"><a href="https://antistatique.net" style="text-decoration: none;">Branding</a></singleline>
-                  <singleline label="reading_time">• 7min de lecture</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td height="4" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="4">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-    <layout label="title">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td height="4" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="4">
-                </td>
-              </tr>
-              <tr>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:28px;line-height:120%;font-weight: 700;color:#000032;">
-                  <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
-                    <singleline label="title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td height="4" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="4">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="paragraphe_content">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td height="4" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="4">
-                </td>
-              </tr>
-              <tr>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight: normal;color:#808098;">
-                  <multiline label="paragraphe">
-                    <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#808098;">
-                      Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
-                    </p>
-                  </multiline>
-                </td>
-              </tr>
-              <tr>
-                <td height="4" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="4">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="cta_link">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight: normal;color:#FF0099;">
-                  <a href="https://antistatique.net" class="cta_link" style="font-size:18px;">
-                    <singleline label="link">Ths is a link CTA label</singleline>
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="two_column_articles">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td>
-
-                  <table cellpadding="0" cellspacing="0" border="0" width="290" align="left" class="full-table">
-                    <tr>
-                      <td height="8" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="8">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="image.png" alt="..." editable="true" label="article_1_image" width="290" height="auto" class="full-image">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="8" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="8">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight: 400;color:#808098;">
-                        <singleline label="article_1_category-link"><a href="https://antistatique.net" style="text-decoration: none;">Branding</a></singleline>
-                        <singleline label="article_1_reading_time">• 7min de lecture</singleline>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="4" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="4">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height:120%;font-weight: 700;color:#000032;">
-                        <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
-                          <singleline label="article_1_title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="8" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="8">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight: normal;color:#808098;">
-                        <multiline label="article_1_paragraphe">
-                          <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#808098;">
-                            Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
-                          </p>
-                        </multiline>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td height="4" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="4">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight: normal;color:#FF0099;">
-                        <a href="https://antistatique.net" class="cta_link" style="font-size:18px;">
-                          <singleline label="article_1_link">Ths is a link CTA label</singleline>
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td height="32" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="32">
-                      </td>
-                    </tr>
-
-                  </table>
-
-
-                  <table cellpadding="0" cellspacing="0" border="0" width="290" align="right" class="full-table">
-                    <tr>
-                      <td height="8" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="8">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="image.png" alt="..." editable="true" label="article_1_image" width="290" height="auto" class="full-image">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="8" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="8">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight: 400;color:#808098;">
-                        <singleline label="article_1_category-link"><a href="https://antistatique.net" style="text-decoration: none;">Branding</a></singleline>
-                        <singleline label="article_1_reading_time">• 7min de lecture</singleline>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="4" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="4">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height:120%;font-weight: 700;color:#000032;">
-                        <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
-                          <singleline label="article_1_title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="8" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="8">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight: normal;color:#808098;">
-                        <multiline label="article_1_paragraphe">
-                          <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#808098;">
-                            Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
-                          </p>
-                        </multiline>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td height="4" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="4">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;font-weight: normal;color:#FF0099;">
-                        <a href="https://antistatique.net" class="cta_link" style="font-size:18px;">
-                          <singleline label="article_1_link">Ths is a link CTA label</singleline>
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td height="32" style="line-height:1px;font-size:1px;">
-                        <img src="px.gif" alt="" width="1" height="32">
-                      </td>
-                    </tr>
-
-                  </table>
-
-
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-    <layout label="blog_item">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td rowspan="3" width="135" align="left">
-                  <img src="image_blog.png" alt="..." editable="true" label="image" width="135" class="full-image">
-                </td>
-                <td rowspan="3" width="10" align="left">
-                  <img src="px.gif" alt="" width="10">
-                </td>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight: 400;color:#808098;">
-                  <singleline label="category-link"><a href="https://antistatique.net" style="text-decoration: none;">Branding</a></singleline>
-                  <singleline label="reading_time">• 7min de lecture</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height:120%;font-weight: 700;color:#000032; padding: 4px 0;">
-                  <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
-                    <singleline label="title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
-                  </a>
+                <td height="16" style="line-height:1px;font-size:1px;">
+                  <img src="px.gif" alt="" width="1" height="16">
                 </td>
               </tr>
               <tr>
                 <td>
-                  <table cellpadding="0" cellspacing="0" border="0" align="left">
-                    <tr>
-                      <td>
-                        <img src="avatar-kevin.png" alt="..." editable="true" label="image" width="30" style="margin-right: 4px;">
-                      </td>
-                      <td>
-                        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight: normal;color:#808098;">
-                          <singleline label="author">Alberto Gomez</singleline>
-                        </span>
-                      </td>
-                    </tr>
-                  </table>
+                  <div style="background-color: #D2EEFA; border-start-start-radius: 16px;border-end-end-radius: 16px; border-start-end-radius: 16px;">
+                    
+                      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                      <tr>
+                        <td height="16" width="16" style="line-height:1px;font-size:1px;" rowspan="3">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                        <td height="16"style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                        <td height="16" width="16" style="line-height:1px;font-size:1px;" rowspan="3">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height: 140%;font-weight: 400;color:#000032;margin-bottom: 0;" class="text_20">
+                          <multiline label="quote">
+                                <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height: 140%;font-weight: 400;color:#000032;margin-bottom: 0;" class="text_20">
+                                  “Antistatique a dès les premiers pas fait preuve de beaucoup d’enthousiasme et de professionnalisme. [...] un projet dynamique, évolutif et ayant déjà reçu des échos très favorables du terrain.”</p>
+                              </multiline>                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="16"style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                      </tr>
+                      </table>                  
+                  </div>
                 </td>
               </tr>
-              <tr>
-                <td colspan="3" height="8" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="8">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
+                <tr>
+                  <td align="left" valign="top" height="16"style="line-height:1px;font-size:1px;">
+                    <img src="2025_quote_triangle.png" alt="" style="display: block;" width="16">
+                  </td>
+                </tr>
+                <tr>
+                  <td height="6"style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="6">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;font-weight: 500;color:#000032;" class="text_16" valign="top">
+                    <singleline label="quote_author"><a href="https://antistatique.net" style="text-decoration: none;">Léonard Evéquoz</a></singleline>
+                  </td>
+                </tr>
+                <tr>
+                  <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                    <singleline label="quote_function"><a href="https://antistatique.net" style="text-decoration: none;color:#4D4D70;">Directeur adjoint · Smarter</a></singleline>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="16"style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="16">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+</repeater>
+<!-- @@@ //LAYOUT @@@ -->
 
 
-    <layout label="blog_item_2authors">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr>
-                <td rowspan="3" width="135" align="left">
-                  <img src="image_blog.png" alt="..." editable="true" label="image" width="135" class="full-image">
-                </td>
-                <td rowspan="3" width="10" align="left">
-                  <img src="px.gif" alt="" width="10">
-                </td>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:15px;font-weight: 400;color:#808098;">
-                  <singleline label="category-link"><a href="https://antistatique.net" style="text-decoration: none;">Branding</a></singleline>
-                  <singleline label="reading_time">• 7min de lecture</singleline>
-                </td>
-              </tr>
-              <tr>
-                <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height:120%;font-weight: 700;color:#000032; padding: 4px 0;">
-                  <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
-                    <singleline label="title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <table cellpadding="0" cellspacing="0" border="0" align="left">
-                    <tr>
-                      <td>
-                        <img src="authors_blog.png" alt="..." editable="true" label="image" width="50" style="margin-right: 4px;">
-                      </td>
-                      <td>
-                        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight: normal;color:#808098;">
-                          <singleline label="author">Alberto Gomez</singleline>
-                        </span>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3" height="8" style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="" width="1" height="8">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
 
-    <layout label="yes_or_no">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr height="32">
-                <td style="line-height:1px;font-size:1px;" colspan="3">
-                  <img src="px.gif" alt="spacer" height="32">
-                </td>
-              </tr>
-              <tr>
-                <td align="right">
-                  <a href="https://antistatique.net" class="cta_button" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:27px;">
-                    <singleline label="cta_left">YES</singleline>
-                  </a>
-                </td>
-                <td width="12">
-                  <img src="px.gif" alt="spacer" width="12">
-                </td>
-                <td align="left">
-                  <a href="https://antistatique.net" class="cta_button" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:27px;">
-                    <singleline label="cta_right">NO</singleline>
-                  </a>
-                </td>
-              </tr>
-              <tr height="32">
-                <td style="line-height:1px;font-size:1px;" colspan="3">
-                  <img src="px.gif" alt="spacer" height="32">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
+ <!-- Repérages start -->
 
-    <layout label="big_cta">
-      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-        <tr>
-          <td>
-            <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-              <tr height="32">
-                <td style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="spacer" height="32">
-                </td>
-              </tr>
-              <tr>
-                <td align="center">
-                  <a href="https://antistatique.net" class="cta_button cta_button_full" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight: 900;font-size:20px;">
-                    <singleline label="cta_right">Partager la newsletter</singleline>
-                  </a>
-                </td>
-              </tr>
-              <tr height="32">
-                <td style="line-height:1px;font-size:1px;">
-                  <img src="px.gif" alt="spacer" height="32">
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </layout>
-
-  </repeater>
-
-  <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
-    <tr height="64">
-      <td style="line-height:1px;font-size:1px;">
-        <img src="px.gif" alt="spacer" height="64">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+<tr>
+  <td>
+    <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+    <tr>
+      <td bgcolor="#FFFFFF" colspan="5" style="line-height:1px;font-size:1px;" valign="bottom">
+          <img src="2025_block_watch_top.png" alt="Antistatique - notre logo en magenta" width="100%" class="full-image" />
       </td>
     </tr>
     <tr>
-      <td height="1" style="line-height:1px;font-size:1px;" bgcolor="#E1E1E1" class="hr-table">
-        <img src="px.gif" alt="spacer" height="1">
+      <td bgcolor="#FFEFF0" rowspan="2" style="line-height:1px;font-size:1px;">
+        <img src="px.gif" alt="spacer" width="4">
       </td>
-    </tr>
-    <tr height="64">
-      <td style="line-height:1px;font-size:1px;">
-        <img src="px.gif" alt="spacer" height="64">
+      <td rowspan="2" style="line-height:1px;font-size:1px;">
+        <img src="px.gif" alt="spacer" width="20">
+      </td>
+      <td align="center" style="line-height:1px;font-size:1px;" height="20" width="100%">
+        <img src="px.gif" alt="spacer" height="20">
+      </td>
+      <td rowspan="2" style="line-height:1px;font-size:1px;">
+        <img src="px.gif" alt="spacer" width="20">
+      </td>
+      <td bgcolor="#FFEFF0" rowspan="2" style="line-height:1px;font-size:1px;">
+        <img src="px.gif" alt="spacer" width="4">
       </td>
     </tr>
     <tr>
       <td>
-        <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
-          <tr>
-            <td align="center">
-              <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:28px;line-height:120%;font-weight: 700;color:#000032; margin-bottom:0;">
-                Publié par <a href="https://antistatique.net" style="text-decoration: none;">Antistatique</a>
-              </p>
-              <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#808098;">
-                Agence web basée à Genève et Lausanne
-              </p>
-
-              <table border="0" cellspacing="0" cellpadding="0" style="margin:3em 0 4em;">
-                <tr>
-                  <td width="50" align="center">
-                    <a href="https://facebook.com/Antistatique">
-                      <img src="facebook.png" / alt="facebook" width="18" height="18">
-                    </a>
-                  </td>
-                  <!-- <td width="40" align="center">
-                                       <a href="https://github.com/antistatique">
-                                           <img src="github.png"/ alt="github" width="18" height="18">
-                                       </a>
-                                   </td> -->
-                  <td width="40" align="center">
-                    <a href="https://instagram.com/antistatique">
-                      <img src="instagram.png" / alt="instagram" width="18" height="18">
-                    </a>
-                  </td>
-                  <td width="40" align="center">
-                    <a href="https://www.linkedin.com/company/antistatique.net">
-                      <img src="linkedin.png" / alt="linkedin" width="18" height="18">
-                    </a>
-                  </td>
-                  <td width="40" align="center">
-                    <a href="https://twitter.com/antistatique">
-                      <img src="twitter.png" / alt="twitter" width="18" height="18">
-                    </a>
-                  </td>
-                </tr>
-              </table>
-              <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#808098;">
-                Écrivez-nous à <a href="mailto:hello@antistatique.net" style="color:#808098">hello@antistatique.net</a>
-              </p>
-              <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5em;color:#808098;">
-                <webversion style="color:#808098;text-decoration:underline;">Version web</webversion> • <preferences style="color:#808098;text-decoration:underline;">Gestion des pr&eacute;f&eacute;rences</preferences> • <unsubscribe style="color:#808098;text-decoration:underline;">Se d&eacute;sinscrire</unsubscribe>
-              </p>
-
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr height="64">
-      <td style="line-height:1px;font-size:1px;">
-        <img src="px.gif" alt="spacer" height="64">
+        
+        <repeater>
+          <layout label="reperage">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+              <tr>
+                <td width="50" rowspan="2" valign="top">
+                  <a href="https://antistatique.net"><img src="2025_portrait_marc.png" alt="Marc" editable="true" width="50"></a>
+                </td>
+                <td width="8" style="line-height:1px;font-size:1px;" rowspan="2">
+                  <img src="px.gif" alt="spacer" width="8">
+                </td>
+                <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                  <singleline label="reperage_category"><a href="https://antistatique.net" style="text-decoration: none;color:#4D4D70;">Branding</a></singleline>
+                </td>
+                <td width="8" style="line-height:1px;font-size:1px;" rowspan="2">
+                  <img src="px.gif" alt="spacer" width="8">
+                </td>
+                <td width="8" style="line-height:1px;font-size:1px;" rowspan="2">
+                  <a href="https://antistatique.net"><img src="2025_icon-arrow-up-right.png" alt="arrow" editable="true" width="20"></a>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:28px;font-weight: 500;color:#000032;" class="title_22" valign="top">
+                <singleline label="reperage_lien"><a href="https://antistatique.net" style="text-decoration: underline;">Branding de la ville d'Helsinki Branding de la ville d'Helsinki Branding de la ville d'Helsinki</a></singleline>
+              </td>
+              </tr>
+            </table>
+          </layout>
+          <layout label="reperage_hr">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" height="17" class="hr-table">
+              <tr>
+                <td height="8" style="line-height:1px;font-size:1px;">
+                  <img src="px.gif" alt="spacer" height="8">
+                </td>
+              </tr>
+            <tr>
+              <td height="1" style="line-height:1px;font-size:1px;" bgcolor="#E1E1E1" >
+                <img src="px.gif" alt="spacer" height="1">
+                <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                  <singleline label="blank-text">Antistatique</singleline>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td height="8" style="line-height:1px;font-size:1px;">
+                <img src="px.gif" alt="spacer" height="8">
+              </td>
+            </tr>
+          </table>
+          </layout>
+        </repeater>
+        
       </td>
     </tr>
     <tr>
-      <td height="32" style="line-height:1px;font-size:1px;" bgcolor="#E1E1E1">
-        <img src="px.gif" alt="spacer" height="32">
+      <td colspan="2" rowspan="2" width="24" height="24" style="line-height:1px;font-size:1px;">
+          <img src="2025_block_watch_bottom_left.png" alt="border" width="24" height="24" style="display: block;"/>
+       </td>
+        <td style="line-height:1px;font-size:1px;">
+          <img src="px.gif" alt="spacer" width="20">
+        </td>
+      <td colspan="2" rowspan="2" width="24" height="24" style="line-height:1px;font-size:1px;">
+          <img src="2025_block_watch_bottom_right.png" alt="border" width="24" height="24" style="display: block;"/>
+       </td>
+    </tr>
+    <tr>
+      <td  bgcolor="#FFEFF0" style="line-height:1px;font-size:1px;" height="4">
+        <img src="px.gif" alt="spacer" width="4" height="4">
       </td>
+    </tr>
+  </table>
+  </td>
     </tr>
   </table>
 
 
 
-</body>
+<!-- @@@ LAYOUT @@@ -->
+<repeater>
+    
+     
+      <layout label="spacer-8">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="8">
+          <tr>
+            <td height="8" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="8">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="spacer-16">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="16">
+          <tr>
+            <td height="16" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="16">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="spacer-32">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="32">
+          <tr>
+            <td height="32" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="32">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="spacer-64">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff" height="64">
+          <tr>
+            <td height="64" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="64">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+    
+      <layout label="hr">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#E1E1E1" height="1" class="hr-table">
+          <tr>
+            <td height="1" style="line-height:1px;font-size:1px;">
+              <img src="px.gif" alt="spacer" height="1">
+              <span style="color:#ffffff;display:none;font-size:1px;" class="invisible_text">
+                <singleline label="blank-text">Antistatique</singleline>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="intro-text">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td>
+                    <multiline label="intro">
+                      <p style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032;" class="title_22">
+                        Bonjour Noémie, cette semaine, on vous parle de l’évolution de notre agence tant d’un point de vue structurel que visuel. Nous sommes ravis de te la faire découvrir !
+                      </p>
+                    </multiline>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="title-numbered">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td height="24" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="40">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height:112%;font-weight: 500;color:#FF00AA;" class="title_32">
+                      <singleline label="title">Point of view</singleline>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height:112%;font-weight: 500;color:#000032;" class="title_32">
+                      <singleline label="title">Refonte web, comment se positionner</singleline>
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="24" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="24">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+    
+      <layout label="category_reading-time">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                  <singleline label="article_1_category-link"><a href="https://antistatique.net" style="text-decoration: none;color:#FF00AA;">Portfolio</a></singleline>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      <layout label="title">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height:112%;font-weight: 500;color:#000032;" class="title_32">
+                    <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
+                      <singleline label="title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="12" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="12">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      <layout label="image">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td>
+                    <img src="2025_banner_tiphaine.png" alt="..." editable="true" label="image" width="600" class="full-image" style="height:auto;border-radius: 8px;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="paragraphe_content">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td height="4" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="4">
+                  </td>
+                </tr>
+                <tr>
+                  <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                    <multiline label="paragraphe">
+                      <p  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                        Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
+                      </p>
+                    </multiline>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="4" style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="4">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="cta_link">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                    <a href="https://antistatique.net" class="cta_link text_20">
+                      <singleline label="link">Ths is a link CTA label</singleline>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+      <layout label="two_column_elements">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr>
+                  <td>
+    
+                    <table cellpadding="0" cellspacing="0" border="0" width="290" align="left" class="full-table">
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="2025_banner_tiphaine.png" alt="..." editable="true" label="article_1_image" width="290" height="auto" class="full-image" style="height:auto;border-radius: 8px;">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                          <singleline label="article_1_category-link"><a href="https://antistatique.net" style="text-decoration: none;color:#FF00AA;">Portfolio</a></singleline>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="2" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="2">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032;" class="title_22">
+                          <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
+                            <singleline label="article_1_title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                          <multiline label="article_1_paragraphe">
+                            <p  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                              Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
+                            </p>
+                          </multiline>
+                        </td>
+                      </tr>
+    
+                      <tr>
+                        <td height="4" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="4">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;" class="text_16">
+                          <a href="https://antistatique.net" class="cta_link text_16" style="color:#FF00AA;">
+                            <singleline label="article_1_link">Ths is a link CTA label 2</singleline>
+                          </a>
+                        </td>
+                      </tr>
+    
+                      <tr>
+                        <td height="32" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="32">
+                        </td>
+                      </tr>
+    
+                    </table>
+    
+    
+                    <table cellpadding="0" cellspacing="0" border="0" width="290" align="right" class="full-table">
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img src="2025_banner_tiphaine.png" alt="..." editable="true" label="article_2_image" width="290" height="auto" class="full-image" style="height:auto;border-radius: 8px;">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                       <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#FF00AA;" class="text_16">
+                        <singleline label="article_2_category-link"><a href="https://antistatique.net" style="text-decoration: none;color:#FF00AA;">Portfolio</a></singleline>
+                      </td>
+                      </tr>
+                      <tr>
+                        <td height="2" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="2">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032;" class="title_22">
+                          <a href="https://antistatique.net" style="color:#000032;text-decoration:none;">
+                            <singleline label="article_2_title">Dernières nouveautés ou peut être un titre sur plusieurs lignes histoire de tester l'interlignage</singleline>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="8" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="8">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                          <multiline label="article_2_paragraphe">
+                            <p  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                              Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesen.
+                            </p>
+                          </multiline>
+                        </td>
+                      </tr>
+    
+                      <tr>
+                        <td height="4" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="4">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;" class="text_16">
+                          <a href="https://antistatique.net" class="cta_link text_16" style="color:#FF00AA;">
+                            <singleline label="article_2_link">Ths is a link CTA label</singleline>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="32" style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="32">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      
+    
+      <layout label="big_cta">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                <tr height="32">
+                  <td style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="spacer" height="32">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <a href="https://antistatique.net" class="cta_button cta_button_full text_20" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height: 140%;font-weight: 400;color:#FFFFFF;">
+                      <singleline label="cta_right">Partager la newsletter</singleline>
+                    </a>
+                  </td>
+                </tr>
+                <tr height="32">
+                  <td style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="spacer" height="32">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+      
+      <layout label="quote">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+              <tr>
+                <td height="16" style="line-height:1px;font-size:1px;">
+                  <img src="px.gif" alt="" width="1" height="16">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="background-color: #D2EEFA; border-start-start-radius: 16px;border-end-end-radius: 16px; border-start-end-radius: 16px;">
+                    
+                      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+                      <tr>
+                        <td height="16" width="16" style="line-height:1px;font-size:1px;" rowspan="3">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                        <td height="16"style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                        <td height="16" width="16" style="line-height:1px;font-size:1px;" rowspan="3">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height: 140%;font-weight: 400;color:#000032;margin-bottom: 0;" class="text_20">
+                          <multiline label="quote">
+                                <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;line-height: 140%;font-weight: 400;color:#000032;margin-bottom: 0;" class="text_20">
+                                  “Antistatique a dès les premiers pas fait preuve de beaucoup d’enthousiasme et de professionnalisme. [...] un projet dynamique, évolutif et ayant déjà reçu des échos très favorables du terrain.”</p>
+                              </multiline>                          
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="16"style="line-height:1px;font-size:1px;">
+                          <img src="px.gif" alt="" width="1" height="16">
+                        </td>
+                      </tr>
+                      </table>                  
+                  </div>
+                </td>
+              </tr>
+                <tr>
+                  <td align="left" valign="top" height="16"style="line-height:1px;font-size:1px;">
+                    <img src="2025_quote_triangle.png" alt="" style="display: block;" width="16">
+                  </td>
+                </tr>
+                <tr>
+                  <td height="6"style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="6">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;font-weight: 500;color:#000032;" class="text_16" valign="top">
+                    <singleline label="quote_author"><a href="https://antistatique.net" style="text-decoration: none;">Léonard Evéquoz</a></singleline>
+                  </td>
+                </tr>
+                <tr>
+                  <td  style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height: 140%;font-weight: 400;color:#4D4D70;" class="text_16">
+                    <singleline label="quote_function"><a href="https://antistatique.net" style="text-decoration: none;color:#4D4D70;">Directeur adjoint · Smarter</a></singleline>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="16"style="line-height:1px;font-size:1px;">
+                    <img src="px.gif" alt="" width="1" height="16">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </layout>
+    
+</repeater>
+<!-- @@@ //LAYOUT @@@ -->
 
+
+
+<!-- @@@ FOOTER @@@ -->
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+    <tr height="32">
+      <td style="line-height:1px;font-size:1px;">
+        <img src="px.gif" alt="spacer" height="32">
+      </td>
+    </tr>
+</table>    
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#ffffff">
+  <tr>
+    <td>
+      <table cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="full-table">
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;" colspan="7">
+            <img src="px.gif" alt="" width="1" height="48">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:32px;line-height:112%;font-weight: 500;color:#000032;" class="title_32" colspan="7">
+              <singleline label="Sondage_title">Cette newsletter était</singleline>
+          </td>
+        </tr>
+        <tr>
+          <td height="24" style="line-height:1px;font-size:1px;" colspan="7">
+            <img src="px.gif" alt="" width="1" height="24">
+          </td>
+        </tr>
+        <tr>
+          <td style="line-height:12px;font-size:12px;" width="25%">
+              <div style="background-color: #F2F2F5; border-radius: 16px;">
+                <center>
+                  <br/><br/>
+                  <a href="https://antistatique.net/merci" style="text-decoration: none;">
+                  <img src="2025_icon_visage-triste.png" alt="Pas la meilleure" editable="true" width="45">
+                  </a>
+                  <br/><br/>
+                  <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;font-weight: 500;color:#4D4D70;">
+                    <singleline label="Sondage_1"><a href="https://antistatique.net/merci" style="text-decoration: none;">Pas la meilleure</a></singleline>
+                  </p>
+                  <br/>
+                </center>
+              </div>
+          </td>
+          <td width="8" style="line-height:1px;font-size:1px;">
+            <img src="px.gif" alt="" width="8" height="8">
+          </td>    
+          <td style="line-height:12px;font-size:12px;" width="25%">
+              <div style="background-color: #F2F2F5; border-radius: 16px;">
+                <center>
+                  <br/><br/>
+                  <a href="https://antistatique.net/merci" style="text-decoration: none;">
+                  <img src="2025_icon_bird.png" alt="Pas la meilleure" editable="true" width="45">
+                  </a>
+                  <br/><br/>
+                  <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;font-weight: 500;color:#4D4D70;">
+                    <singleline label="Sondage_2"><a href="https://antistatique.net/merci" style="text-decoration: none;">trop courte</a></singleline>
+                  </p>
+                  <br/>
+                </center>
+              </div>
+          </td>
+          <td width="8" style="line-height:1px;font-size:1px;">
+            <img src="px.gif" alt="" width="8" height="8">
+          </td>   
+          <td style="line-height:12px;font-size:12px;" width="25%">
+              <div style="background-color: #F2F2F5; border-radius: 16px;">
+                <center>
+                  <br/><br/>
+                  <a href="https://antistatique.net/merci" style="text-decoration: none;">
+                  <img src="2025_icon_idee.png" alt="Pas la meilleure" editable="true" width="45">
+                  </a>
+                  <br/><br/>
+                  <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;font-weight: 500;color:#4D4D70;">
+                    <singleline label="Sondage_3"><a href="https://antistatique.net/merci" style="text-decoration: none;">Instructive</a></singleline>
+                  </p>
+                  <br/>
+                </center>
+              </div>
+          </td>
+          <td width="8" style="line-height:1px;font-size:1px;">
+            <img src="px.gif" alt="" width="8" height="8">
+          </td>   
+          <td style="line-height:12px;font-size:12px;" width="25%">
+              <div style="background-color: #F2F2F5; border-radius: 16px;">
+                <center>
+                  <br/><br/>
+                  <a href="https://antistatique.net/merci" style="text-decoration: none;">
+                  <img src="2025_icon_visage-etoiles.png" alt="Pas la meilleure" editable="true" width="45">
+                  </a>
+                  <br/><br/>
+                  <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;font-weight: 500;color:#4D4D70;">
+                    <singleline label="Sondage_4"><a href="https://antistatique.net/merci" style="text-decoration: none;">Incroyable</a></singleline>
+                  </p>
+                  <br/>
+                </center>
+              </div>
+          </td>                                    
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;" colspan="7">
+            <img src="px.gif" alt="" width="1" height="48">
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+
+<table cellpadding="0" cellspacing="0" border="0" width="700" align="center" class="full-table" bgcolor="#FFCC48" style="border-radius: 16px;">
+
+          <tr>
+            <td style="line-height:1px;font-size:1px;" width="24">
+              <img src="px.gif" alt="spacer" height="24" width="24">
+            </td>
+            <td align="left">
+              <img src="2025_arrow_footer.png" alt="arrow" style="margin-top:0;margin-right:15%;margin-left: 20%;margin-bottom:16px;float: right;">
+              
+              <table cellpadding="2" cellspacing="2" border="0">
+                <tr>
+                  <td style="line-height:1px;font-size:1px;" height="16">
+                    <img src="px.gif" alt="spacer" height="16" width="16">
+                  </td>
+                </tr>
+              <tr><td>
+              <p style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032; margin-bottom:2px;" class="title_22">
+                Antistatique
+              </p>
+              <p style="font-family:'San Francisco Display','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:22px;line-height:26px;font-weight: 500;color:#000032; margin-bottom:20px;opacity: 0.5" class="title_22">
+                Digital Since Forever.
+              </p>
+              </td>
+              </tr>
+              <tr>
+                <td style="line-height:1px;font-size:1px;" height="16">
+                  <img src="px.gif" alt="spacer" height="16" width="16">
+                </td>
+              </tr>
+              </table>
+              
+              
+              <table cellpadding="2" cellspacing="2" border="0" align="left">
+                <tr>
+                    <td><a href="https://facebook.com/Antistatique" target="_blank"><img src="2025_icon_rs_facebook.png" alt="facebook" style="display: block;"></a></td>
+                    <td><a href="https://instagram.com/antistatique" target="_blank"><img src="2025_icon_rs_instagram.png" alt="instagram" style="display: block;"></a></td>
+                    <td><a href="https://www.linkedin.com/company/antistatique.net/" target="_blank"><img src="2025_icon_rs_linkedin.png" alt="linkedin" style="display: block;"></a></td>
+                    <td><a href="https://x.com/antistatique" target="_blank"><img src="2025_icon_rs_x.png" alt="x" style="display: block;"></a></td>
+                </tr>
+                <tr>
+                  <td style="line-height:1px;font-size:1px;" height="16" colspan="4">
+                    <img src="px.gif" alt="spacer" height="16" width="16">
+                  </td>
+                </tr>
+              </table>
+              
+              <table cellpadding="0" cellspacing="0" border="0" align="right">
+                <tr>
+                  <td valign="top">
+                    <div><!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="mailto:hello@antistatique.net" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="80%" stroke="f" fillcolor="#000032">
+                        <w:anchorlock/>
+                        <center>
+                      <![endif]-->
+                          <a href="mailto:hello@antistatique.net"
+                    style="background-color:#000032;border-radius:32px;color:#ffffff;display:inline-block;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Nous écrire !</a>
+                      <!--[if mso]>
+                        </center>
+                      </v:roundrect>
+                    <![endif]--></div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+            <td style="line-height:1px;font-size:1px;" width="24">
+              <img src="px.gif" alt="spacer" height="24" width="24">
+            </td>
+          </tr>
+           <tr height="24">
+             <td style="line-height:1px;font-size:1px;" width="24">
+               <img src="px.gif" alt="spacer" height="24" width="24">
+             </td>
+               <td style="line-height:1px;font-size:1px;">
+                 <img src="px.gif" alt="spacer" height="24">
+               </td>
+              <td style="line-height:1px;font-size:1px;" width="24">
+               <img src="px.gif" alt="spacer" height="24" width="24">
+             </td>
+           </tr>
+        </table>
+<!-- /@@@ FOOTER @@@ -->
+
+<!-- @@@ /ALL CONTENT @@@ -->
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr height="64">
+	  <td style="line-height:1px;font-size:1px;">
+		<img src="px.gif" alt="spacer" height="64">
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+		<center>
+		<p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:14px;line-height:20px;color:#808098;">
+			Contactez-nous par mail : <a href="mailto:hello@antistatique.net" style="color:#808098;text-decoration:underline;">hello@antistatique.net</a><br/>
+			Ou d’une façon plus traditionnelle : <a href="https://antistatique.net/agence-web" style="color:#808098;text-decoration:underline;">Rue de Genève 90B, 1004 Lausanne</a><br/><br/>
+		  <webversion style="color:#808098;text-decoration:underline;">Version web</webversion> • <unsubscribe style="color:#808098;text-decoration:underline;">Se d&eacute;sinscrire</unsubscribe>
+		</p>
+		</center>
+	  </td>
+	</tr>
+	<tr>
+	  <td height="32" style="line-height:1px;font-size:1px;" bgcolor="#ffffff">
+		<img src="px.gif" alt="spacer" height="32">
+	  </td>
+	</tr>
+  </table>
+
+	<!--[if (gte mso 9)|(IE)]>
+  </td></tr></table>
+  <![endif]-->
+
+</body>
 </html>
